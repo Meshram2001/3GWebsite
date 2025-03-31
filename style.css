@@ -1,0 +1,543 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f2f2f2;
+  height: 100px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: rgb(248, 245, 245)
+}
+
+.navbar {
+  display: flex;
+  padding: 0 50px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar input#menu-toggler {
+  display: none;
+}
+
+.navbar #hamburger-btn {
+  cursor: pointer;
+  display: none;
+}
+
+.navbar .all-links {
+  padding: 2% 6% ;
+  display: flex;
+  align-items: right;
+  text-align: right;
+  font-size: 25px;
+  gap: 20px;
+  font-family: arial,'Times New Roman', Times, serif;
+  position: relative;
+  bottom: 10px;
+  right: -350px;
+  
+  
+}
+
+.navbar .all-links:hover{
+  
+    color: #03a534;
+    
+}
+
+.navbar .all-links li {
+  padding: auto;
+  position: relative;
+  list-style: none;
+  gap: 10px;
+  
+}
+
+
+
+.navbar .logo a {
+  padding: 15px;
+  display: flex;
+  align-items: left;
+  margin-left: 0;
+  text-align: left;
+  left: 100px;
+  padding-left: 0;
+}
+
+
+.navbar .logo img{
+  
+  position: absolute;
+  height: 60px;
+  width: auto;
+  left: 100px;
+  bottom: 38px;
+  justify-content: center;
+  
+
+  
+}
+
+header a, footer a {
+  margin-left: 40px;
+  text-decoration: none;
+  color: #140202;
+  height: 100%;
+  padding: 20px 0;
+  display: inline-block;
+}
+
+header a:hover, footer a:hover {
+  color: #08f328;
+}
+
+
+.homepage {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background: url("images/web Site/bgmi.jpg");
+  background-position: center;
+  background-size: 1920px;
+
+  
+}
+
+
+.homepage::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.homepage .content {
+  display: flex;
+  height: 85%;
+  z-index: 3;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.homepage .content h1 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.homepage .content .text {
+  margin-bottom: 50px;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.content a {
+  color: #000;
+  display: block;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 0 10px;
+  padding: 10px 30px;
+  border-radius: 5px;
+  background: #fff;
+  border: 2px solid #fff;
+  transition: 0.4s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.content a:hover {
+  color: #fff;
+  background: rgba(247, 242, 242, 0.3);
+}
+
+section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 80px 0 0;
+}
+
+section h2 {
+  font-size: 2rem;
+}
+
+section > p {
+  text-align: center;
+}
+
+section .cards {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin-top: 50px;
+  padding: 0 10px;
+  justify-content: space-between;
+}
+
+section.about {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.about .company-info {
+  margin-top: 30px;
+}
+
+.about h3 {
+  margin: 30px 0 10px;
+}
+
+.about .team {
+  text-align: left;
+  width: 100%;
+}
+
+.about .team ul {
+  padding-left: 20px;
+}
+
+
+.services .cards{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.services .cards .card{
+  width: 80%;
+  padding: 15px;
+  text-align: center;
+  background-color: lightgray; /* Add background for visibility */
+  border-radius: 10px;
+}
+
+.services .cards .card:nth-child(odd){
+  align-self: flex-start;
+}
+
+.services .cards .card1:nth-child(even){
+  align-self: flex-end;
+}
+
+.services .card img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  width: 150px; /* Increased image width */
+    height: 150px; /* Increased image height */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+.portfolio .card{
+  height: 450px;
+  box-shadow: 0 4px 8px rgba(14, 13, 13, 0.1)
+}
+
+.portfolio .cards .card {
+  padding: 10 10 10px;
+  
+}
+
+.portfolio .cards .card:hover{
+  color: #08f328;
+}
+
+
+.portfolio .card img {
+  height: 50%;
+  width: 50%;
+  padding-bottom: 20px;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+}
+
+.cards .card p {
+  padding: 0 15px;
+  margin-top: 5px;
+}
+
+.about .row {
+  padding: 0 10px;
+}
+
+.contact .row {
+  margin: 60px 0 90px;
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact .row .col {
+  padding: 0 10px;
+  width: calc(100% / 2 - 50px);
+}
+
+.contact .col p {
+  margin-bottom: 10px;
+}
+
+.contact .col p i {
+  color: #7a7a7a;
+  margin-right: 10px;
+}
+
+.contact form input {
+  height: 45px;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+  border: 1px solid #bfbfbf;
+}
+
+.contact form textarea {
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  height: 150px;
+  outline: none;
+  resize: vertical;
+  border: 1px solid #bfbfbf;
+}
+
+.contact form button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 17px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #333;
+  transition: 0.2s ease;
+}
+
+.contact form button:hover {
+  background: #525252;
+}
+
+
+
+
+
+  .navbar #menu-toggler:checked~.all-links {
+    left: 0;
+  }
+
+  .navbar .all-links li {
+    font-size: 18px;
+  }
+
+  .navbar #hamburger-btn {
+    display: block;
+  }
+
+  section > p {
+    text-align: center;
+  }
+
+  section .cards .card {
+    width: calc(100% / 2 - 15px);
+    margin-bottom: 30px;
+  }
+
+  .homepage .content h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .homepage .content .text {
+    font-size: 17px;
+  }
+
+  .content a {
+    font-size: 17px;
+    padding: 9px 20px;
+  }
+
+  .contact .row {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+
+  .contact .row .col {
+    width: 100%;
+  }
+
+  .contact .row .col:last-child {
+    margin-top: 40px;
+  }
+
+  footer a {
+    height: 0;
+  }
+
+  .form .col form{
+    background-color: #000;
+    align-items: center;
+
+  }
+
+  button {
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+
+
+.contact {
+  background-color: #000;
+}
+
+/* Form Section Styling */
+.Form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.form-container {
+  background: #110d0d;
+  padding: 20px;
+  border-radius: 8px;
+  width: 50%;
+}
+
+.form input, .form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+.form button {
+  width: 100%;
+  padding: 10px;
+  background: #00ff00;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+footer {
+  background-color: #333; /* Set background color */
+  color: white; /* Text color */
+  padding: 20px 0; /* Top and bottom padding */
+  text-align: center;
+  position: fixed; /* Keeps footer at the bottom */
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Full width */
+}
+
+footer .contact {
+  margin: 0 auto; /* Centering */
+  padding: 20px;
+  max-width: 2000px; /* Adjust width as needed */
+}
+
+
+.headcon {
+  color: #00ff00;
+  font-size: 24px;
+  margin-bottom: 50px;
+
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin: 100px;
+}
+
+.con1, .con3 {
+  background: #f3f1f1;
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+  text-align: left;
+  display: block;
+  
+}
+
+
+
+.Foot {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ccc;
+  display: inline-block
+}
+
+.Foot b {
+  color: #00ff00;
+  margin-top: 10px;
+}
+
+
+
+
+@media screen and (max-width: 860px) {
+  .navbar .all-links {
+    position: fixed;
+    left: -100%;
+    width: 300px;
+    display: block;
+    height: 100vh;
+    top: 75px;
+    background: #333;
+    transition: left 0.3s ease;
+  }
+
+}

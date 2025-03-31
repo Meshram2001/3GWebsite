@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3G Associates</title>
+    <link rel="icon" type="image/png" href="images\favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+          <h2 class="logo"><a href="#"></a><img src="images/Logo.jpg" alt=""></h2>
+          
+          <label for="menu-toggler" id="hamburger-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+              <path d="M0 0h24v24H0z" fill="none"/>
+              <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/>
+            </svg>
+          </label>
+          <ul class="all-links">
+            <li><a href="3g.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Project</a></li>
+            <li><a href="service.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+  
+        
+      </header>
+
+    
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>Reach out to us for any inquiries or feedback.</p>
+        <div class="row">
+          <div class="col information">
+            <div class="contact-details">
+              <p><i class="fas fa-map-marker-alt"></i><b>3G Associates</b><br> First Floor, Kuraskar Bhavan, Near Vishal Mega Mart,<br> Bhande Plot Square <br>Nagpur-440024 <br>Maharashtra</p>
+              <p><i class="fas fa-envelope"></i>3gasso@gmail.com</p>
+              <p><i class="fas fa-phone"></i>07122984809</p>
+              <p><i class="fas fa-clock"></i>Monday - Saturday: 10:00 AM - 6:30 PM</p>
+              <p><i class="fas fa-clock"></i>Sunday: Closed</p>
+              <p><i class="fas fa-globe"></i>www.3GAssociates.org</p>
+            </div>          
+          </div>
+          <div class="col form">
+            <form>
+              <input type="text" placeholder="Name*" required>
+              <input type="email" placeholder="Email*" required>
+              <textarea placeholder="Message*" required></textarea>
+              <button id="submit" type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      
+
+      <iframe 
+     
+      
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1860.8582934395472!2d79.11654183879156!3d21.123862397113093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c7562c41319d%3A0xe2565cde5166e3c9!2sFitness%20Freaks%20Gym!5e0!3m2!1sen!2sin!4v1743225251850!5m2!1sen!2sin" 
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  
+      <footer>
+        <div>
+          <span> © 2025 3G Associates | All Rights Reserved</span>
+          <span class="link">
+              <a href="#">Home</a>
+              <a href="#contact">Contact</a>
+          </span>
+        </div>
+
+        <div>
+          <h3>Find us Here</h3>
+          <div class="map-container" id="map"></div>
+        </div>
+
+      
+      </footer>
+
+      <script>
+        function initMap() {
+            var location = { lat: 21.1458, lng: 79.0882 }; // Nagpur coordinates
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 12,
+                center: location,
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map,
+            });
+        }
+    </script>
+    
+  
+    
+</body>
+</html>

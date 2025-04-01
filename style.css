@@ -5,15 +5,21 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  
 }
 
 html {
   scroll-behavior: smooth;
+  height: 100px;
 }
 
 body {
-  background: #f2f2f2;
-  height: 100px;
+  background: white;
+  min-height: 80vh; /* Minimum height of the viewport */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Optional: Helps distribute height among child elements */
+    flex-direction: column; /* Stack children vertically */
 }
 
 header {
@@ -27,6 +33,7 @@ header {
   background: rgb(248, 245, 245)
 }
 
+/*Navigation CSS part*/
 .navbar {
   display: flex;
   padding: 0 50px;
@@ -125,6 +132,12 @@ header a:hover, footer a:hover {
   
 }
 
+.homepage .text p{
+  font-family: arial,'Times New Roman', Times, serif;
+  font-size: large;
+  font-weight: 50px;
+}
+
 
 .homepage::before {
   content: "";
@@ -192,6 +205,7 @@ section h2 {
 
 section > p {
   text-align: center;
+  font-family: arial,'Times New Roman', Times, serif;
 }
 
 section .cards {
@@ -203,325 +217,556 @@ section .cards {
   justify-content: space-between;
 }
 
-section.about {
-  margin: 0 auto;
-  max-width: 1200px;
+
+
+.navbar #menu-toggler:checked~.all-links {
+  left: 0;
 }
 
-.about .company-info {
-  margin-top: 30px;
+.navbar .all-links li {
+  font-size: 18px;
 }
 
-.about h3 {
-  margin: 30px 0 10px;
-}
-
-.about .team {
-  text-align: left;
-  width: 100%;
-}
-
-.about .team ul {
-  padding-left: 20px;
+.navbar #hamburger-btn {
+  display: block;
 }
 
 
-.services .cards{
+
+section .cards .card {
+  width: calc(100% / 2 - 15px);
+  margin-bottom: 30px;
+}
+
+.homepage .content h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.homepage .content .text {
+  font-size: 17px;
+}
+
+
+/*Services CSS part*/
+
+
+.services {
+  text-align: center;
+  background: linear-gradient(to right, #4b79a1, #283e51);
+  color: white;
+  padding: 60px 20px;
+}
+
+.services .cards {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 50px;
+  max-width: 80%;
+  margin: auto;
 }
 
-.services .cards .card{
+.services .cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   width: 80%;
-  padding: 15px;
-  text-align: center;
-  background-color: lightgray; /* Add background for visibility */
+  padding: 20px;
+  background-color: rgb(74, 131, 88);
   border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  gap: 20px;
 }
 
-.services .cards .card:nth-child(odd){
-  align-self: flex-start;
-}
-
-.services .cards .card1:nth-child(even){
-  align-self: flex-end;
-}
-
-.services .card img {
-  width: 120px;
-  height: 120px;
-  margin-bottom: 20px;
+.services .cards .card img {
+  width: 250px;
+  height: 250px;
   object-fit: cover;
-  width: 150px; /* Increased image width */
-    height: 150px; /* Increased image height */
-    object-fit: cover;
-    border-radius: 5px;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+
+.services .cards .card .text-content {
+  flex: 1;
+  text-align: left;
+}
+
+.services .cards .card h3 {
+  margin: 10px 0;
+  font-size: 24px;
+}
+
+.services .cards .card p {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: bold;
 }
 
 
-.portfolio .card{
-  height: 450px;
-  box-shadow: 0 4px 8px rgba(14, 13, 13, 0.1)
+/* Odd elements align to the left */
+.services .cards .card:nth-child(odd) {
+  align-self: flex-start;
+  transform: translateX(-10%);
+}
+
+/* Even elements align to the right */
+.services .cards .card:nth-child(even) {
+  align-self: flex-end;
+  transform: translateX(10%);
+}
+
+/* Hover effect for scaling and shadow */
+.services .cards .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/*Project CSS part*/
+
+.portfolio{
+  text-align: center;
+  background: linear-gradient(to right, #4b79a1, #283e51); /* Modern gradient background */
+  color: white;
+  padding: 60px 20px;
+}
+
+.portfolio .card {
+  height: 500px;
+  box-shadow: 0 6px 12px rgba(14, 13, 13, 0.2);
+  border-radius: 15px; /* Softened edges */
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background: #ffffff;
+}
+
+.portfolio .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(14, 13, 13, 0.3);
 }
 
 .portfolio .cards .card {
-  padding: 10 10 10px;
-  
+  padding: 15px;
+  border: 2px solid rgba(8, 243, 40, 0.2);
+  background: linear-gradient(145deg, #f3f3f3, #ffffff);
 }
 
-.portfolio .cards .card:hover{
+.portfolio .cards .card:hover {
   color: #08f328;
+  border-color: #08f328;
 }
-
 
 .portfolio .card img {
   height: 50%;
   width: 50%;
   padding-bottom: 20px;
-  aspect-ratio: 16 / 9;
-  border-radius: 10px;
+  aspect-ratio: 10 / 8;
+  border-radius: 20px; /* Making edges more circular */
+  object-fit: cover;
 }
 
-.cards .card p {
-  padding: 0 15px;
-  margin-top: 5px;
+.portfolio .card h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
 }
 
-.about .row {
-  padding: 0 10px;
+.portfolio .card h4 {
+  font-size: 18px;
+  font-weight: normal;
+  color: #666;
 }
 
-.contact .row {
-  margin: 60px 0 90px;
-  display: flex;
-  max-width: 1200px;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
+/* Adding subtle animation */
+.portfolio .card:hover h3 {
+  color: #08f328;
+  transform: scale(1.1);
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.contact .row .col {
-  padding: 0 10px;
-  width: calc(100% / 2 - 50px);
+
+
+
+
+/* About Us Section */
+.service {
+  text-align: center;
+  background: linear-gradient(to right, #4b79a1, #283e51); /* Modern gradient background */
+  color: white;
+  padding: 60px 20px;
 }
 
-.contact .col p {
-  margin-bottom: 10px;
-}
-
-.contact .col p i {
-  color: #7a7a7a;
-  margin-right: 10px;
-}
-
-.contact form input {
-  height: 45px;
+/* Section Title */
+.service h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
   margin-bottom: 20px;
-  padding: 10px;
-  width: 100%;
-  font-size: 16px;
-  outline: none;
-  border: 1px solid #bfbfbf;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-.contact form textarea {
-  padding: 10px;
-  width: 100%;
-  font-size: 16px;
-  height: 150px;
-  outline: none;
-  resize: vertical;
-  border: 1px solid #bfbfbf;
+/* Description Text */
+.service p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+  opacity: 0.9;
 }
 
-.contact form button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  font-size: 17px;
-  color: #fff;
-  border: none;
+/* Main Container Box */
+.service-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Grid Layout for Items */
+.cards1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual Card Styling */
+.card1 {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
   cursor: pointer;
-  border-radius: 5px;
-  background: #333;
-  transition: 0.2s ease;
 }
 
-.contact form button:hover {
-  background: #525252;
+/* Card Heading */
+.card1 h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffd700; /* Gold Text */
 }
 
-  .navbar #menu-toggler:checked~.all-links {
-    left: 0;
-  }
-
-  .navbar .all-links li {
-    font-size: 18px;
-  }
-
-  .navbar #hamburger-btn {
-    display: block;
-  }
-
-  section > p {
-    text-align: center;
-  }
-
-  section .cards .card {
-    width: calc(100% / 2 - 15px);
-    margin-bottom: 30px;
-  }
-
-  .homepage .content h1 {
-    font-size: 40px;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
-
-  .homepage .content .text {
-    font-size: 17px;
-  }
-
-  .content a {
-    font-size: 17px;
-    padding: 9px 20px;
-  }
-
-  .contact .row {
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
-  }
-
-  .contact .row .col {
-    width: 100%;
-  }
-
-  .contact .row .col:last-child {
-    margin-top: 40px;
-  }
-
- 
-
-  .form .col form{
-    background-color: #000;
-    align-items: center;
-
-  }
-
-  button {
-    background-color: #007bff;
-    color: white;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
+/* Card Text */
+.card1 p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #f1f1f1;
 }
 
-button:hover {
-    background-color: #0056b3;
-    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+/* Hover Effects */
+.card1:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.3);
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service h2 {
+      font-size: 2rem;
+  }
+
+  .service p {
+      font-size: 1rem;
+  }
+
+  .cards1 {
+      grid-template-columns: 1fr;
+  }
+
+  .service-container {
+      padding: 20px;
+  }
+}
+
+
+/* Contact Section Styling */
 
 
 .contact {
-  background-color: #e9e6e6;
+  background: #fff;
+  padding: 0px 20px;
+  text-align: center;
 }
 
-/* Form Section Styling */
-.Form {
+.contact .row {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50vh;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto; 
+}
+
+.map-container {
+  width: 40%; /* Adjust width for map container */
+  background: #fff;
+  padding: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 .form-container {
-  background: #110d0d;
+  width: 55%; /* Adjust width for form container */
+  background: #fff;
   padding: 20px;
-  border-radius: 8px;
-  width: 50%;
+  box-shadow: 0px 30px 42px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
-.form input, .form textarea {
+.map-container iframe {
   width: 100%;
+  height: 310px;
+  border-radius: 10px;
+}
+
+.contact input,
+.contact textarea {
+  width: 80%;
   padding: 10px;
   margin: 10px 0;
-  border: none;
-  border-radius: 5px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
 }
 
-.form button {
-  width: 100%;
-  padding: 10px;
-  background: #00ff00;
+.contact button {
+  background: #007bff;
+  color: #fff;
   border: none;
-  color: #000;
-  font-weight: bold;
+  padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
 }
 
+.contact button:hover {
+  background: #0056b3;
+}
+
+
+
+
+
+/*Footer CSS part*/
 footer {
-  background-color: #333; /* Footer background color */
-  color: white; /* Footer text color */
-  text-align: center;
-  padding: 20px;
-  position: fixed; /* Keeps footer at the bottom */
-  bottom: 0;
-  left: 0;
-  width: 100%; /* Full-width */
-  height: 100px; /* Adjust height as needed */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: #000; /* Black Background */
+  color: white; /* White Text */
+  padding: 40px 0;
+  font-size: 14px;
 }
 
-footer .contact {
-  width: 100%;
-  max-width: 2000px;
+.footer-top {
+  padding-bottom: 30px; /* Fixed padding issue */
+  background-color: #000; /* Black */
 }
 
-.headcon {
-  color: #00ff00;
-  font-size: 24px;
-  margin-bottom: 50px;
-
-}
-
-.main {
+.footer-top .row {
   display: flex;
   flex-wrap: wrap;
-  padding: 20px;
-  margin: 100px;
+  justify-content: space-between;
 }
 
-.con1, .con3 {
-  background: #f3f1f1;
+.address-section, .contact-section {
+  width: 48%;
   padding: 20px;
-  border-radius: 5px;
-  width: 100%;
+}
+
+.address-section {
   text-align: left;
-  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight:bold;
+
+}
+
+.contact-section {
+  text-align: right;
+  gap: 5px;
+}
+
+.contact-section h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color:white; /* White Text */
+  
+}
+
+.address-section h4{
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color:white; /* White Text */
   
 }
 
 
 
-.Foot {
-  margin-top: 20px;
-  font-size: 14px;
-  color: #ccc;
-  display: inline-block
+.contact-section a {
+  color: #0bec1e; /* Yellow for visibility */
+  text-decoration: none;
 }
 
-.Foot b {
-  color: #00ff00;
-  margin-top: 10px;
+.contact-section a:hover, .address-section a:hover {
+  text-decoration: underline;
 }
 
+.container-1 {
+  background-color: #000; /* Black */
+}
+
+.copyright {
+  background: #000; /* Black */
+  text-align: center;
+  color: white;
+  padding: 10px;
+  border-top: 1px solid #444;
+}
+
+.credits {
+  background: #000; /* Black */
+  text-align: center;
+  color: white;
+  font-size: 13px;
+}
+
+.credits a {
+  color: #0bec1e; /* Yellow */
+  text-decoration: none;
+}
+
+.credits a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Career Section  CSS part*/
+.career-section {
+  background: linear-gradient(to right, #4b79a1, #283e51);
+  color: white;
+  padding: 30px 30px;
+  text-align: center;
+  display: flex; /* Enables Flexbox */
+  justify-content: flex-end; /* Moves content to the right */
+  align-items: center;
+  
+}
+
+/* Form Container */
+.container {
+  max-width: 700px;
+  width: 100%;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  color: #333;
+  margin-right: 1000px; /* Pushes form from the right edge */
+}
+
+/* Heading of carrar page*/
+
+/* Left-align the Career section text */
+.career-text {
+  text-align: left;
+  padding-left: 1000px; /* Adjust left spacing as needed */
+  height: 100px;
+}
+
+.career .name {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.slowgen h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100px;
+}
+
+.slowgen p {
+  font-size: 18px;
+  max-width: 600px; /* Controls text width */
+  line-height: 1.5;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
+
+
+/* Form Styling */
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input:focus, select:focus {
+  border-color: #4b79a1;
+  outline: none;
+}
+
+/* Submit Button */
+.submit-btn {
+  background: #4b79a1;
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #283e51;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .career-section {
+      justify-content: center; /* Center form on smaller screens */
+      padding: 40px 20px;
+  }
+
+  .container {
+      margin-right: 0;
+  }
+}
 
 
 

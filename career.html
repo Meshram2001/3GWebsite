@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3G Associates</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    x
 </head>
 <body>
+
+   <div class="career">
+    <h1 class="name">Career</h1>
+   </div>
 
     <header>
         <nav class="navbar">
@@ -28,18 +33,94 @@
           </ul>
         </nav>
 
-     </header>   
+     </header> 
 
-     <h1 class="text-center font-bold font-size-500">Career</h1>
+   
 
-     <div class="slowgen">
+   <section class="career-section">
 
-        <h3>"Unlock Your Potential with Us."</h3>
+        <div class="career-text">
+           
+       
+            <div class="slowgen">
+                 <h3>"Unlock Your Potential with Us."</h3><br><br>
+                 <p >"Success isn’t just about climbing the ladder—it’s about building it for others too. Grow, inspire, and lead the way!"</p>
+            </div>
+        </div>
 
-        <p>"Success isn’t just about climbing the ladder—it’s about building it for others too. Grow, inspire, and lead the way!"</p>
 
+    <div class="container">
+        <h2>Join Our Team</h2>
+        <p>Fill out the form below to apply for a position at our company.</p>
 
+        <form action="submit_form.php" method="POST" enctype="multipart/form-data">
+            
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" required min="18" max="65" placeholder="Enter your age">
+            </div>
+
+            <div class="form-group">
+                <label for="qualification">Qualification</label>
+                <input type="text" id="qualification" name="qualification" required placeholder="Enter your qualification">
+            </div>
+
+            <div class="form-group">
+                <label for="resume">Upload Resume</label>
+                <input type="file" id="resume" name="resume" required accept=".pdf,.doc,.docx">
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Application</button>
+
+        </form>
     </div>
+</section>
+
+<footer id="footer">
+    
+
+    <div class="container-1">
+      <div class="footer-top">
+        
+            <div class="row">
+                <div class="contact-section">
+                    <h4>Contact</h4>
+                    <p><strong>Phone:</strong> <a href="tel:07122984809">+91 07122984809</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:3gasso@gmail.com">3gasso@gmail.com</a></p>
+                    
+                </div>
+                <div class="address-section">
+                    <h4>Address</h4>
+                    <p><strong>Nagpur Office</strong></p>
+                    <p>3G Associates<br>First Floor, Kuraskar Bhavan,<br>Near Vishal Mega Mart,<br>Bhande Plot Square,<br>Nagpur-440024, Maharashtra</p>
+                </div>
+            </div>
+        
+    </div>
+        <div class="copyright">
+            &copy; Copyright <strong><span>3GAssociates 2025</span></strong>. All Rights Reserved 
+        </div>
+        <div class="credits">
+            Designed and Developed by<a href="http://www.3GAssociates.org"><b>3GAssociates 2025</b></a> 
+        </div>
+    </div>
+</footer>
+
     
 </body>
 </html>

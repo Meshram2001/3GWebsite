@@ -4,22 +4,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  
   
 }
 
 html {
   scroll-behavior: smooth;
-  height: 100px;
+  
 }
 
 body {
-  background: white;
-  min-height: 80vh; /* Minimum height of the viewport */
-    margin: 0;
-    padding: 0;
-    display: flex; /* Optional: Helps distribute height among child elements */
-    flex-direction: column; /* Stack children vertically */
+  font-family: Arial, 'Times New Roman', Times, serif;
+  line-height: 2.6;
+   background: rgb(248, 245, 245);
+  padding-top: 70px;
 }
 
 header {
@@ -28,9 +26,10 @@ header {
   left: 0;
   z-index: 5;
   width: 100%;
+  padding: 15px 0;
   display: flex;
   justify-content: center;
-  background: rgb(248, 245, 245)
+  background: white;
 }
 
 /*Navigation CSS part*/
@@ -133,9 +132,9 @@ header a:hover, footer a:hover {
 }
 
 .homepage .text p{
-  font-family: arial,'Times New Roman', Times, serif;
-  font-size: large;
-  font-weight: 50px;
+  
+  font-size: 30px;
+  font-weight: bold;
 }
 
 
@@ -196,7 +195,9 @@ section {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 80px 0 0;
+  padding: 100px 0; /* Uniform padding for all sections */
+  min-height: 10vh; /* Each section takes at least full viewport height */
+  width: 100%;
 }
 
 section h2 {
@@ -249,12 +250,55 @@ section .cards .card {
 }
 
 
+/*Homa-section-Services-part*/
+
+
+
+/*Top Heading of Very component*/
+.A1 {
+  backdrop-filter: blur(100px);
+  /* Green transparent background */
+  background: rgba(40, 180, 80, 0.2); /* Green with 20% opacity */
+  
+  /* Blur effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  
+  /* Light green border */
+  border: 1px solid rgba(100, 220, 120, 0.3);
+  
+  /* Optional extras */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 100, 0, 0.1); /* Subtle green shadow */
+  /* Container styling */
+  display: flex;
+  justify-content: flex-start; /* Changed from center to flex-start */
+  padding: 80px;
+  width: 100%; /* Ensure full width */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Section Title */
+.A1 h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: black;
+  /* Removed display:flex and justify-content as they're redundant */
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+  text-align: left; /* Explicit left alignment */
+  width: 100%; /* Take full container width */
+}
+
+
 /*Services CSS part*/
 
 
 .services {
   text-align: center;
-  background: linear-gradient(to right, #4b79a1, #283e51);
+  background: rgb(248, 245, 245);
   color: white;
   padding: 60px 20px;
 }
@@ -274,7 +318,7 @@ section .cards .card {
   justify-content: flex-start;
   width: 80%;
   padding: 20px;
-  background-color: rgb(74, 131, 88);
+  background: rgb(80, 150, 130);
   border-radius: 10px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   position: relative;
@@ -306,18 +350,6 @@ section .cards .card {
 }
 
 
-/* Odd elements align to the left */
-.services .cards .card:nth-child(odd) {
-  align-self: flex-start;
-  transform: translateX(-10%);
-}
-
-/* Even elements align to the right */
-.services .cards .card:nth-child(even) {
-  align-self: flex-end;
-  transform: translateX(10%);
-}
-
 /* Hover effect for scaling and shadow */
 .services .cards .card:hover {
   transform: scale(1.05);
@@ -329,8 +361,8 @@ section .cards .card {
 
 .portfolio{
   text-align: center;
-  background: linear-gradient(to right, #4b79a1, #283e51); /* Modern gradient background */
-  color: white;
+  background: rgb(248, 245, 245);
+  color: black;
   padding: 60px 20px;
 }
 
@@ -356,7 +388,7 @@ section .cards .card {
 .portfolio .cards .card {
   padding: 15px;
   border: 2px solid rgba(8, 243, 40, 0.2);
-  background: linear-gradient(145deg, #f3f3f3, #ffffff);
+  background: white;
 }
 
 .portfolio .cards .card:hover {
@@ -368,9 +400,9 @@ section .cards .card {
   height: 50%;
   width: 50%;
   padding-bottom: 20px;
-  aspect-ratio: 10 / 8;
-  border-radius: 20px; /* Making edges more circular */
-  object-fit: cover;
+  aspect-ratio: 16 / 8;
+  border-radius: 10px; /* Making edges more circular */
+  
 }
 
 .portfolio .card h3 {
@@ -399,19 +431,13 @@ section .cards .card {
 /* About Us Section */
 .service {
   text-align: center;
-  background: linear-gradient(to right, #4b79a1, #283e51); /* Modern gradient background */
-  color: white;
+  background: rgb(248, 245, 245);
+  color: black;
   padding: 60px 20px;
 }
 
-/* Section Title */
-.service h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
+
+
 
 /* Description Text */
 .service p {
@@ -419,8 +445,12 @@ section .cards .card {
   max-width: 800px;
   margin: 0 auto 30px;
   line-height: 1.6;
-  opacity: 0.9;
+  opacity: 1;
+  font-family: Arial, 'Times New Roman', Times, serif;
+  color: black;
+  
 }
+
 
 /* Main Container Box */
 .service-container {
@@ -465,7 +495,7 @@ section .cards .card {
 .card1 p {
   font-size: 1rem;
   line-height: 1.5;
-  color: #f1f1f1;
+  color: black;
 }
 
 /* Hover Effects */
@@ -498,65 +528,94 @@ section .cards .card {
 /* Contact Section Styling */
 
 
-.contact {
-  background: #fff;
-  padding: 0px 20px;
-  text-align: center;
-}
 
-.contact .row {
+
+/* Contact Section */
+.contact-map-section {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  padding: 50px;
   gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto; 
+  flex-direction: row-reverse; /* Changed this to reverse the order */
+  text-align: center;
+  background: rgb(248, 245, 245);
+  color: white;
+  padding: 60px 20px;
 }
 
-.map-container {
-  width: 40%; /* Adjust width for map container */
-  background: #fff;
-  padding: 5px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+.contact-form, .map {
+  background-color: white;
   border-radius: 10px;
-}
-
-.form-container {
-  width: 55%; /* Adjust width for form container */
-  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  box-shadow: 0px 30px 42px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  width: 45%;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.map-container iframe {
+.contact-form:hover, .map:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contact-map-section h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #1a0f0f;
+  text-decoration: underline;
+}
+
+.input-field {
+  margin-bottom: 20px;
+}
+
+.input-field label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.input-field input, .input-field textarea {
   width: 100%;
-  height: 310px;
-  border-radius: 10px;
-}
-
-.contact input,
-.contact textarea {
-  width: 80%;
   padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-}
-
-.contact button {
-  background: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
+  border: 1px solid #ddd;
   border-radius: 5px;
+  font-size: 14px;
+  outline: none;
 }
 
-.contact button:hover {
-  background: #0056b3;
+.input-field input:focus, .input-field textarea:focus {
+  border-color: #007BFF;
 }
 
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.submit-btn {
+  background-color: #007BFF;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.map iframe {
+  border-radius: 10px;
+  width: 100%;
+  height: 300px;
+}
 
 
 
@@ -656,7 +715,7 @@ footer {
 
 /* Career Section  CSS part*/
 .career-section {
-  background: linear-gradient(to right, #4b79a1, #283e51);
+  background: rgb(248, 245, 245);
   color: white;
   padding: 30px 30px;
   text-align: center;
@@ -696,21 +755,28 @@ footer {
 }
 
 .slowgen h3 {
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 100px;
+  font-size: 80px; /* Adjusted font size for better readability */
+  font-weight: 600; /* Removed 'px' as it's not needed for font-weight */
+  margin-bottom: 10px; /* Increased margin for better spacing */
+  font-family: Arial, 'Times New Roman', Times, serif;
+  color: black;
+  display: inline; /* Added inline property */
+  text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.7); /* Increased shadow effect */
 }
 
 .slowgen p {
-  font-size: 18px;
-  max-width: 600px; /* Controls text width */
-  line-height: 1.5;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 30px;
+  font-size: 18px; /* Set a consistent font size for paragraph */
+  max-width: 700px; /* Increased max-width for a better text width */
+  line-height: 1.6; /* Improved line height for better readability */
+  font-weight: 400; /* Regular font weight for better balance with bold headings */
+  font-family: Arial, 'Times New Roman', Times, serif;
+  margin: 0 auto; /* Center the paragraph text */
+  text-align: justify; /* Justify text for better alignment */
+  color: #000;
+  display: inline; /* Added inline property */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Added shadow */
 }
+
 
 
 /* Form Styling */

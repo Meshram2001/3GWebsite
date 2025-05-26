@@ -1,0 +1,508 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  
+}
+
+html {
+  scroll-behavior: smooth;
+  
+}
+
+body {
+  font-family: Arial, 'Times New Roman', Times, serif;
+  line-height: 2.6;
+   background: rgb(248, 245, 245);
+  padding-top: 70px;
+}
+
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  background: white;
+}
+
+/*Navigation CSS part*/
+.navbar {
+  display: flex;
+  padding: 0 50px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar input#menu-toggler {
+  display: none;
+}
+
+.navbar #hamburger-btn {
+  cursor: pointer;
+  display: none;
+  background-color: #000;
+}
+
+/* Responsive menu - for mobile */
+@media (max-width: 768px) {
+  #hamburger-btn {
+    display: none;
+  }
+
+  #menu-toggler:not(:checked)~.all-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    align-items: stretch;
+    flex: 1 1 100%; /* One item per row */
+    top: 10px;
+    left: 0;
+    width: 100px;
+    background-color: #444;
+    padding: 100px ;
+  }
+
+  /* Show menu when toggled */
+  #menu-toggler:checked ~ .all-links {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    flex-wrap: wrap;
+    gap: 2px;
+    top: 10px;
+    left: 10px;
+    width: 100%;
+    background-color: #444;
+    padding: 20px;
+    z-index: 10;
+    font-size: 20px;
+    font-family: arial,'Times New Roman', Times, serif;
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(0);
+    opacity: 1;
+
+  }
+
+  .all-links li {
+    text-align: left;
+    margin: 10px 0;
+  }
+}
+
+.navbar .all-links {
+  padding: 2% 6% ;
+  display: flex;
+  align-items: right;
+  text-align: right;
+  font-size: 25px;
+  gap: 20px;
+  font-family: arial,'Times New Roman', Times, serif;
+  position: relative;
+  bottom: 10px;
+  right: -350px;
+  
+  
+}
+
+.navbar .all-links:hover{
+  
+    color: #03a534;
+    
+}
+
+.navbar .all-links li {
+  padding: auto;
+  position: relative;
+  list-style: none;
+  gap: 10px;
+  
+}
+
+
+
+.navbar .logo a {
+  padding: 15px;
+  display: flex;
+  align-items: left;
+  margin-left: 0;
+  text-align: left;
+  left: 100px;
+  padding-left: 0;
+}
+
+
+.navbar .logo img{
+  
+  position: absolute;
+  height: 60px;
+  width: auto;
+  left: 100px;
+  bottom: 38px;
+  justify-content: center;
+  
+
+  
+}
+
+header a, footer a {
+  margin-left: 40px;
+  text-decoration: none;
+  color: #140202;
+  height: 100%;
+  padding: 20px 0;
+  display: inline-block;
+}
+
+header a:hover, footer a:hover {
+  color: #08f328;
+}
+/* Top Heading of Every Component */
+.A1 {
+    background: rgba(245, 247, 246, 0.2); /* Light transparent background */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border: 1px solid rgba(115, 117, 115, 0.3);
+   
+    box-shadow: 0 4px 6px rgba(0, 100, 0, 0.1);
+    
+    display: flex;
+    align-items: center; /* Vertically center */
+    justify-content: flex-start; /* Horizontally left */
+    padding: 60px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Section Title */
+.A1 h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: black;
+    position: relative; /* Required for ::after underline */
+    margin: 5px;
+    padding: -5px;
+    text-align: left;
+    display: inline-block; /* Important to fit underline exactly */
+}
+
+/* Underline */
+.A1 h2::after {
+    content: '';
+    display: block;
+    height: 3px; /* Thickness of underline */
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly dark underline */
+    width: 100%; /* Exactly the width of text */
+    margin-top: -5px; /* Space between text and underline */
+}
+
+
+/* Contact Section */
+.contact-map-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    gap: 20px;
+    flex-direction: row-reverse; /* Changed this to reverse the order */
+    text-align: center;
+    background: rgb(248, 245, 245);
+    color: white;
+    padding: 60px 20px;
+  }
+  
+  .contact-form, .map {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 45%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .contact-form:hover, .map:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contact-map-section h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #1a0f0f;
+    text-decoration: underline;
+  }
+  
+  .input-field {
+    margin-bottom: 20px;
+  }
+  
+  .input-field label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  
+  .input-field input, .input-field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .input-field input:focus, .input-field textarea:focus {
+    border-color: #007BFF;
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+  
+  .submit-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .submit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .map iframe {
+    border-radius: 10px;
+    width: 100%;
+    height: 300px;
+  }
+  
+  
+  
+  
+  /*Footer CSS part*/
+  footer {
+    background: #000; /* Black Background */
+    color: white; /* White Text */
+    padding: 40px 0;
+    font-size: 14px;
+  }
+  
+  .footer-top {
+    padding-bottom: 30px; /* Fixed padding issue */
+    background-color: #000; /* Black */
+  }
+  
+  .footer-top .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .address-section, .contact-section {
+    width: 48%;
+    padding: 20px;
+  }
+  
+  .address-section {
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+  
+  }
+  
+  .contact-section {
+    text-align: right;
+    gap: 5px;
+  }
+  
+  .contact-section h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color:white; /* White Text */
+    
+  }
+  
+  .address-section h4{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color:white; /* White Text */
+    
+  }
+  
+  
+  
+  .contact-section a {
+    color: #0bec1e; /* Yellow for visibility */
+    text-decoration: none;
+  }
+  
+  .contact-section a:hover, .address-section a:hover {
+    text-decoration: underline;
+  }
+  
+  .container-1 {
+    background-color: #000; /* Black */
+  }
+  
+  .copyright {
+    background: #000; /* Black */
+    text-align: center;
+    color: white;
+    padding: 10px;
+    border-top: 1px solid #444;
+  }
+  
+  .credits {
+    background: #000; /* Black */
+    text-align: center;
+    color: white;
+    font-size: 13px;
+  }
+  
+  .credits a {
+    color: #0bec1e; /* Yellow */
+    text-decoration: none;
+  }
+  
+  .credits a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer section */
+  
+  /* Career Section  CSS part*/
+  .career-section {
+    background: rgb(248, 245, 245);
+    color: white;
+    padding: 30px 30px;
+    text-align: center;
+    display: flex; /* Enables Flexbox */
+    justify-content: flex-end; /* Moves content to the right */
+    align-items: center;
+    
+  }
+  
+  /* Form Container */
+  .container {
+    max-width: 700px;
+    width: 100%;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    color: #333;
+    margin-right: 1000px; /* Pushes form from the right edge */
+  }
+  
+  /* Heading of carrar page*/
+  
+  /* Left-align the Career section text */
+  .career-text {
+    text-align: left;
+    padding-left: 1000px; /* Adjust left spacing as needed */
+    height: 100px;
+  }
+  
+  .career .name {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+  }
+  
+  .slowgen h3 {
+    font-size: 60px; /* Adjusted font size for better readability */
+    font-weight: 10; /* Removed 'px' as it's not needed for font-weight */
+    margin-bottom: 10px; /* Increased margin for better spacing */
+    font-family: Arial, 'Times New Roman', Times, serif;
+    color: black;
+    align-items: baseline;
+    
+   /* Added inline property */
+    text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.7); /* Increased shadow effect */
+  }
+  
+  .slowgen p {
+    font-size: 30px; /*  consistent font size for paragraph */
+    max-width: 700px; /* Increased max-width for a better text width */
+    line-height: 1.6; /* Improved line height for better readability */
+    font-weight: 400; /* Regular font weight for better balance with bold headings */
+    font-family: Arial, 'Times New Roman', Times, serif;
+    margin: 0 auto; /* Center the paragraph text */
+    text-align: justify; /* Justify text for better alignment */
+    color: #000;
+    display: inline; /* Added inline property */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Added shadow */
+  }
+  
+  
+  
+  /* Form Styling */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  input:focus, select:focus {
+    border-color: #4b79a1;
+    outline: none;
+  }
+  
+  /* Submit Button */
+  .submit-btn {
+    background: #4b79a1;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background: #283e51;
+  }
+  
+  
+  

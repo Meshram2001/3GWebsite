@@ -20,6 +20,8 @@ body {
   padding-top: 70px;
 }
 
+
+
 header {
   position: fixed;
   top: 0;
@@ -49,6 +51,56 @@ header {
 .navbar #hamburger-btn {
   cursor: pointer;
   display: none;
+  background-color: #000;
+}
+
+/* Responsive menu - for mobile */
+@media (max-width: 768px) {
+  #hamburger-btn {
+    display: none;
+  }
+
+  #menu-toggler:not(:checked)~.all-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    align-items: stretch;
+    flex: 1 1 100%; /* One item per row */
+    top: 10px;
+    left: 0;
+    width: 100px;
+    background-color: #444;
+    padding: 100px ;
+  }
+
+  /* Show menu when toggled */
+  #menu-toggler:checked ~ .all-links {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    flex-wrap: wrap;
+    gap: 2px;
+    top: 10px;
+    left: 10px;
+    width: 100%;
+    background-color: #444;
+    padding: 20px;
+    z-index: 10;
+    font-size: 20px;
+    font-family: arial,'Times New Roman', Times, serif;
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(0);
+    opacity: 1;
+
+  }
+
+  .all-links li {
+    text-align: left;
+    margin: 10px 0;
+  }
 }
 
 .navbar .all-links {
@@ -252,20 +304,304 @@ section .cards .card {
 
 /*Homa-section-Services-part*/
 
+/* General styling */
+
+
+.sec1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sec1 h5 {
+  color: #3498db;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.sec1 h2 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+/* Services grid layout */
+.sec2 {
+  display: flex;
+  justify-content: center;
+}
+
+.main1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  max-width: 1600px;
+  
+}
+
+.Main1 {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.Main1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #3498db, #2c3e50);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.Main1:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.Main1:hover::before {
+  opacity: 1;
+}
+
+.Main1 h3 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.Main1 p {
+  color: #7f8c8d;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.Main1:hover h3,
+.Main1:hover p {
+  color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .main1 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .main1 {
+    grid-template-columns: 1fr;
+  }
+  
+  .sec1 h2 {
+    font-size: 2rem;
+  }
+}
+
+/*Home-section-Client-part*/
+
+ /* Client Logo Slider */
+ .client-slider {
+  padding: 40px 0;
+}
+
+.client-slider .sec1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.client-slider .slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background: #f5f5f5;
+  padding: 20px 0;
+}
+
+.client-slider .slider-track {
+  display: flex;
+  align-items: center;
+  animation: slide 40s linear infinite;
+  will-change: transform;
+}
+
+.client-slider .slider-track:hover {
+  animation-play-state: paused;
+}
+
+.client-slider .slider-container::before,
+.client-slider .slider-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.client-slider .slider-container::before {
+  left: 0;
+  background: linear-gradient(to right, #f5f5f5, rgba(245, 245, 245, 0));
+}
+
+.client-slider .slider-container::after {
+  right: 0;
+  background: linear-gradient(to left, #f5f5f5, rgba(245, 245, 245, 0));
+}
+
+.client-slider .slider-track img {
+  height: auto;
+  max-height: 1000px;
+  width: auto;
+  max-width: 1000px;
+  margin: 0 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.slider-track img:hover {
+  background: linear-gradient(45deg, #a8e063, #56ab2f); /* Green gradient */
+  box-shadow: 0 0 15px rgba(60, 160, 101, 0.8); /* Light green glow */
+  transform: scale(1.02); /* Slight scaling for a smooth effect */
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+  border-radius: 20px; /* Rounded corners */
+}
+
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+/*Home-section - aboutUs Part*/
+
+/* About 3G Associates Section - Scoped Styles */
+.about-3g-section {
+  padding: 60px 20px;
+ 
+  margin: 40px 0;
+}
+
+.about-3g-section .sec1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-3g-section .sec1 h5 {
+  color: #3a7bd5;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.about-3g-section .sec1 h2 {
+  color: #333;
+  font-size: 2.5rem;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+}
+
+.about-3g-section .sec1 h2::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(to right, #3a7bd5, #00d2ff);
+  bottom: -10px;
+  left: 20%;
+  border-radius: 3px;
+}
+
+.about-3g-section ul {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.about-3g-section li {
+  background: white;
+  margin-bottom: 15px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.about-3g-section li:hover {
+  transform: translateY(-3px);
+}
+
+.about-3g-section li p {
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+  padding-left: 30px;
+  position: relative;
+}
+
+.about-3g-section li p::before {
+  content: '•';
+  color: #3a7bd5;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-3g-section {
+    padding: 40px 15px;
+  }
+  
+  .about-3g-section .sec1 h2 {
+    font-size: 2rem;
+  }
+  
+  .about-3g-section li {
+    padding: 15px;
+  }
+}
+/*Management and owenership css part*/
+
+.manage-owen{
+  align-items: center;
+}
 
 
 /*Top Heading of Very component*/
 .A1 {
   backdrop-filter: blur(100px);
   /* Green transparent background */
-  background: rgba(40, 180, 80, 0.2); /* Green with 20% opacity */
+  background: rgba(245, 247, 246, 0.2); /* Green with 20% opacity */
   
   /* Blur effect */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px); /* Safari support */
   
   /* Light green border */
-  border: 1px solid rgba(100, 220, 120, 0.3);
+  border: 1px solid rgba(115, 117, 115, 0.3);
   
   /* Optional extras */
   border-radius: 12px; /* Rounded corners */
@@ -281,7 +617,7 @@ section .cards .card {
 /* Section Title */
 .A1 h2 {
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: black;
@@ -295,11 +631,10 @@ section .cards .card {
 
 /*Services CSS part*/
 
-
 .services {
   text-align: center;
   background: rgb(248, 245, 245);
-  color: white;
+  color: rgb(7, 6, 6);
   padding: 60px 20px;
 }
 
@@ -314,47 +649,57 @@ section .cards .card {
 
 .services .cards .card {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 80%;
-  padding: 20px;
-  background: rgb(80, 150, 130);
+  flex-direction: row; /* Stack content vertically */
+  align-items: flex-start;    /* Center horizontally */
+  justify-content: space-between;
+  width: 100%;
+  padding: 30px;
+  background: rgb(172, 219, 206);
   border-radius: 10px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   position: relative;
-  gap: 20px;
+  gap: 40px; /* Reduce gap for tighter spacing */
 }
 
 .services .cards .card img {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 5px;
-  flex-shrink: 0;
+  width: 40%;       /* Makes image responsive (adjusts to card width) */
+  max-width: 400px;  /* Prevents excessive stretching */
+  height: auto;      /* Maintains aspect ratio */
+  border-radius: 10px;
+  object-fit: cover; /* Adds space below the image */
 }
-
-.services .cards .card .text-content {
-  flex: 1;
-  text-align: left;
+.services .cards .card .text-content{
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-
 .services .cards .card h3 {
-  margin: 10px 0;
-  font-size: 24px;
+  margin:0 0 15px 0;         /* Remove default margins */
+  font-size: 28px;
+  text-align: left;
+  text-decoration: underline;
+  font-weight: bold;
+  
+       /* Ensures h3 comes after p (if p is order: 1) */
 }
 
 .services .cards .card p {
-  font-size: 16px;
+  font-size: 24px;
   line-height: 1.5;
-  font-weight: bold;
+  
+  text-align: left;
+  margin: 0;
+   
+  
 }
 
-
-/* Hover effect for scaling and shadow */
+/* Hover effect */
 .services .cards .card:hover {
   transform: scale(1.05);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
+
 
 
 /*Project CSS part*/
@@ -387,7 +732,7 @@ section .cards .card {
 
 .portfolio .cards .card {
   padding: 15px;
-  border: 2px solid rgba(8, 243, 40, 0.2);
+  border: 2px solid rgba(11, 204, 37, 0.2);
   background: white;
 }
 
@@ -422,6 +767,12 @@ section .cards .card {
   color: #08f328;
   transform: scale(1.1);
   transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.portfolio .card:hover h4{
+  color: #03a534;
+  transform: scale(2.1);
+  transition:  color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 
@@ -711,7 +1062,7 @@ footer {
   text-decoration: underline;
 }
 
-
+/* Footer section */
 
 /* Career Section  CSS part*/
 .career-section {
@@ -755,17 +1106,19 @@ footer {
 }
 
 .slowgen h3 {
-  font-size: 80px; /* Adjusted font size for better readability */
-  font-weight: 600; /* Removed 'px' as it's not needed for font-weight */
+  font-size: 60px; /* Adjusted font size for better readability */
+  font-weight: 10; /* Removed 'px' as it's not needed for font-weight */
   margin-bottom: 10px; /* Increased margin for better spacing */
   font-family: Arial, 'Times New Roman', Times, serif;
   color: black;
-  display: inline; /* Added inline property */
+  align-items: baseline;
+  
+ /* Added inline property */
   text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.7); /* Increased shadow effect */
 }
 
 .slowgen p {
-  font-size: 18px; /* Set a consistent font size for paragraph */
+  font-size: 30px; /*  consistent font size for paragraph */
   max-width: 700px; /* Increased max-width for a better text width */
   line-height: 1.6; /* Improved line height for better readability */
   font-weight: 400; /* Regular font weight for better balance with bold headings */
@@ -824,28 +1177,34 @@ input:focus, select:focus {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .career-section {
-      justify-content: center; /* Center form on smaller screens */
-      padding: 40px 20px;
-  }
-
-  .container {
-      margin-right: 0;
-  }
-}
-
-
-
-@media screen and (max-width: 860px) {
   .navbar .all-links {
-    position: fixed;
-    left: -100%;
-    width: 300px;
-    display: block;
-    height: 100vh;
-    top: 75px;
-    background: #333;
-    transition: left 0.3s ease;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 
+  .navbar .logo img {
+    height: 50px;
+  }
+
+  .homepage .content h1 {
+    font-size: 30px;
+  }
+
+  .homepage .content .text {
+    font-size: 15px;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  section > p {
+    font-size: 1rem;
+  }
+
+  section .cards .card {
+    width: calc(100% - 20px);
+    margin-bottom: 20px;
+  }
 }

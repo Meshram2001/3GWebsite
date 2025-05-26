@@ -6,17 +6,20 @@
     <title>3G Associates</title>
     
     <link rel="icon" type="image/png" href="favicon-32x32.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="services.css">
+    
     <link rel="stylesheet" href="script.js">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-</head>
+
+  </head>
 <body>
 
     <header>
         <nav class="navbar">
             <h2 class="logo"><a href="#"></a><img src="images/Logo.jpg" alt=""></h2>
             
+            <input type="checkbox" id="menu-toggler" />
             <label for="menu-toggler" id="hamburger-btn">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
                 <path d="M0 0h24v24H0z" fill="none"/>
@@ -26,7 +29,7 @@
             <ul class="all-links">
               <li><a href="3g.html">Home</a></li>
               <li><a href="services.html">Services</a></li>
-              <li><a href="portfolio.html">Project</a></li>
+              <li><a href="portfolio.html">Projects</a></li>
               <li><a href="service.html">About Us</a></li>
               <li><a href="career.html">Career</a></li>
               <li><a href="contact.html">Contact Us</a></li>
@@ -42,82 +45,87 @@
 
     <section class="services" id="services">
      
-      <ul class="cards">
-        <li class="card">
+      <ul class="cards" >
+        <li class="card" data-aos="flip-right" data-aos-once="true">
           <img src="About/P.jpg" alt="img">
-          <h3>Property Tax Assessment</h3>
-          <p>Tax assessment is the process of determining a property's value, typically for calculating property tax, conducted by a tax assessor.</p>
+          <heading><h3> Online Property Tax Assessment</h3>
+          <p>
+            Online property tax assessment lets you easily check and pay
+            your property tax through your city's official portal. <br> For example, Nagpur residents can search their property, view dues, and pay online.</p>
         </li>
-        <li class="card">
+        <li class="card" data-aos="flip-left"  data-aos-once="true">
+          <img src="About/Offline property tax.jpg" alt="img">
+          <heading><h3>Offline Property Tax Assessment</h3>
+          <p>Offline property tax assessment is done by visiting your local municipal office, 
+             where property owners can submit documents like <br> ownership proof, building plans, and previous tax receipts to get their property evaluated.</p>
+        </li>
+        <li class="card" data-aos="flip-right"  data-aos-once="true">
           <img src="About/G.jpg" alt="img">
-          <h3>GIS Solution</h3>
-          <p>GIS solutions use spatial data for mapping, analysis, and decision-making. They help in urban planning, tax assessment, and infrastructure management.</p>
+          <heading> <h3>GIS Solution</h3>
+          <p>GIS solution use spatial data for mapping, analysis, and decision-making. They help in urban planning, tax assessment, and infrastructure management.</p>
         </li>
-        <li class="card">
+        <li class="card" data-aos="flip-left"  data-aos-once="true">
           <img src="About/GIS.jpg" alt="img">
-          <h3>Land Survey</h3>
+          <heading><h3>Land Survey</h3>
           <p>A land base survey maps and measures land features, boundaries, and properties for planning, development, and legal purposes.</p>
         </li>
-        <li class="card">
+        <li class="card" data-aos="flip-right"  data-aos-once="true">
           <img src="About/parcel.jpg" alt="img">
-          <h3>Parcel Mapping</h3>
+          <heading><h3>Parcel Mapping</h3>
           <p>Parcel mapping is the process of creating and maintaining maps that define property boundaries, ownership, and land divisions for tax and planning purposes.</p>
         </li>
-        <li class="card">
-          <img src="About/Con.jpg" alt="img">
-          <h3>Consumer Survey</h3>
+        <li class="card" data-aos="flip-left"  data-aos-once="true">
+          <img src="About/Consumer survey.jpg" alt="img">
+          <heading><h3>Consumer Survey</h3>
           <p>A consumer survey gathers customer feedback to analyze preferences, behavior, and satisfaction for better decision-making.</p>
         </li>
-        <li class="card">
+        <li class="card" data-aos="flip-right"  data-aos-once="true">
           <img src="About/House.jpg" alt="img">
-          <h3>House Hold Survey</h3>
+          <heading><h3>House Hold Survey</h3>
           <p>A household survey collects data on demographics, income, living conditions, and social aspects to support policy and planning.</p>
         </li>
-        <li class="card">
+        <li class="card" data-aos="flip-left"  data-aos-once="true">
         <img src="About/Socio.jpg" alt="img">
-        <h3>Socio Econimical Survey</h3>
+        <heading><h3>Socio Economical Survey</h3>
         <p>Socioeconomics examines the link between economy and society, including social norms, values, and interactions.</p>
       </li>
     
-    <li class="card">
+    <li class="card" data-aos="flip-right"  data-aos-once="true">
       <img src="About/City.jpg" alt="img">
-      <h3>City Development Survey</h3>
+      <heading><h3>City Development Survey</h3>
       <p>A development plan outlines a local authority's land use policies, guiding planning decisions and ensuring consistent, informed development control.</p>
     </li>
   
-  <li class="card">
+  <li class="card" data-aos="flip-left"  data-aos-once="true">
     <img src="About/DGPS.jpg" alt="img">
-    <h3>DGPS Survey</h3>
-    <p>Differential Global Positioning Systems (DGPSs) supplement and enhance the positional data 
-      available from global navigation satellite systems (GNSSs). A DGPS for GPS can increase accuracy by 
-      about a thousandfold, from approximately 15 metres (49 ft) to 1–3 centimetres (1⁄2–1+1⁄4
-       in).</p>
+    <heading></heading><h3>DGPS Survey</h3>
+    <p>DGPS (Differential GPS) survey is a high-accuracy positioning method that uses correction signals from a fixed base station to improve GPS data. It is widely used in engineering, mapping, and infrastructure projects for precise location measurements.</p>
   </li>
 
-<li class="card">
+<li class="card" data-aos="flip-right"  data-aos-once="true">
   <img src="About/Software.jpg" alt="img">
-  <h3>Software Solution</h3>
-  <p>A software solution is a tailored system or application that addresses specific business or user needs efficiently.</p>
+  <heading><h3>Software Solutions</h3>
+  <p>A software solutions is a tailored system or application that addresses specific business or user needs efficiently.</p>
 </li>
 
-<li class="card">
+<li class="card" data-aos="flip-left"  data-aos-once="true">
   <img src="About/Doc.jpg" alt="img">
-  <h3>Documents management system solutions</h3>
+  <heading><h3>Documents management system solutions</h3>
   <p>A document management system (DMS) is usually a computerized system used to 
     store, share, track and manage files or documents. Some systems include history 
     tracking where a log of the various versions created and modified by different users is 
     recorded.</p>
 </li>
 
-<li class="card">
+<li class="card" data-aos="flip-right"  data-aos-once="true">
   <img src="About/Dig.jpg" alt="img">
-  <h3> Document scanning & Digitization solutions</h3>
+  <heading><h3> Document scanning & Digitization solutions</h3>
   <p>Document scanning & digitization solutions convert physical documents into digital formats for easy storage, access, and management.</p>
 </li>
 
-<li class="card">
+<li class="card" data-aos="flip-left"  data-aos-once="true">
   <img src="About/Dig2.jpg" alt="img">
-  <h3>Arial mapping through drone</h3>
+  <heading><h3>Aerial mapping through drone</h3>
   <p>Aerial survey is a method of collecting geomatics or other imagery by 
     using airplanes, helicopters, UAVs, balloons or other aerial methods.</p>
 </li>
@@ -155,8 +163,14 @@
       </div>
   </div>
 </footer>
- 
 
-    
+<!--Our AOS data-->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    offset: 300,
+    duration: 1000,
+  });
+</script>
 </body>
 </html>

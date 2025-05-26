@@ -1,222 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-    <title>3G Associates</title>
-    <link rel="icon" type="image/png" href="images/favicon-32x32.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="script" href="script.js"
-    <!-- Fontawesome Link for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+  <title>3G Associates</title>
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png">
+  <link rel="stylesheet" href="3g.css" /> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  
+  <link rel="script" href="script.js">
+  <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-  <body>
-    <header>
-      <nav class="navbar">
-        <h2 class="logo"><a href="#"></a><img src="images/Logo.jpg" alt=""></h2>
-        
-        <label for="menu-toggler" id="hamburger-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
-            <path d="M0 0h24v24H0z" fill="none"/>
-            <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/>
-          </svg>
-        </label>
-        <ul class="all-links">
-          <li><a href="3g.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Project</a></li>
-          <li><a href="service.html">About Us</a></li>
-          <li><a href="career.html">Career</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </nav>
-    </header>
 
-    <section class="homepage" id="home">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <h2 class="logo"><img src="images/Logo.jpg" alt=""></h2>
+
+       <!-- <input type="checkbox" id="menu-toggler" /> -->
+      <!-- <label for="menu-toggler" id="hamburger-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/>
+        </svg>
+      </label> -->
+      <ul class="all-links">
+        <li><a href="3g.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Projects</a></li>
+        <li><a href="service.html">About Us</a></li>
+        <li><a href="career.html">Career</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="homepage scroll-animate" id="home">
+    <div class="content">
+      <div class="text">
+        <h1 class="text-3xl font-bold animate-bounce">3G Associates</h1>
+        <p>
+          We use geospatial technology to make the world better. <br>We specialize in GIS mapping, property taxs, surveys, tree census, and software development.     
+          </p>     
+      </div>
+    </div> 
+
+<!-- Service in the top page  -->
+
+  <div class="swiper-wrapper">
+    <div class="swiper-slide service-card">
+    <a href="services.html">
+      <i class="fa-solid fa-building"></i>
+      <h3>Property Tax Assessment</h3>
+    </a>
       
-      <div class="content">
-        
-        <div class="text">
-          <h1 class="text-3xl font-bold animate-bounce">3G Associates</h1>
-          <p>
-            3G Associates specializes in GIS contracting for municipalities, offering mapping, data conversion, 
-            <br>tax parcel mapping, property assessment, tree census, and GIS software development. 
-            <br> GIS software development.</p>
-        </div>
+    </div>
+    <div class="swiper-slide service-card">
+    <a href="services.html">
+      <i class="fa-solid fa-map"></i>
+      <h3>GIS Solution</h3>
+    </a>
       
-      </div> 
-    </section>
+    </div>
+    <div class="swiper-slide service-card">
+      <a href="services.html">
+        <i class="fa-solid fa-drafting-compass"></i>
+      <h3>Land Survey</h3>
+      </a>
+      
+    </div>
+    <div class="swiper-slide service-card">
+      <a href="services.html">
+        <i class="fa-solid fa-map-location-dot"></i>
+      <h3>Parcel Mapping</h3>
+      </a>
+      
+    </div>
+    <div class="swiper-slide service-card">
+    <a href="services.html">
+      <i class="fa-solid fa-laptop-code"></i>
+      <h3>Software Solutions</h3>
+    </a>
 
-    <section>
+    </div>
+    <div class="swiper-slide service-card">
+     <a href="services.html">
+      <i class="fa-solid fa-users"></i>
+      <h3>House Hold Survey</h3>
+     </a>
+      
+    </div>
+  </div>
+</div>
 
-     <div class="sec1">
+  </section>
+
+  <section class="scroll-animate">
+    <div class="sec1 scroll-animate">
       <h5>Services</h5>
       <h2>Services Offered</h2>
-     </div>
+    </div>
 
-      <div class="sec2">
-
-        <ul class="main1">
-          <li class="Main1">
-            
+    <div class="sec2">
+      <ul class="main1">
+        <li class="Main1 scroll-animate" data-aos="flip-down" data-aos-once="true">
+          <i class="fa-solid fa-building icon-left"></i>
+          <div>
             <h3>Property Tax Assessment</h3>
             <p>Tax assessment is the process of determining a property's value, typically for calculating property tax, conducted by a tax assessor.</p>
-          </li>
-          <li class="Main1">
-          
+          </div>
+        </li>
+        <li class="Main1 scroll-animate" data-aos="flip-down" data-aos-once="true">
+          <i class="fa-solid fa-map icon-left"></i>
+          <div>
             <h3>GIS Solution</h3>
-            <p>GIS solutions use spatial data for mapping, analysis, and decision-making. They help in urban planning, tax assessment, and infrastructure management.</p>
-          </li>
-          <li class="Main1">
-        
+            <p>GIS solution use spatial data for mapping, analysis, and decision-making. They help in urban planning, tax assessment, and infrastructure management.</p>
+          </div>
+        </li>
+        <li class="Main1 scroll-animate" data-aos="flip-down" data-aos-once="true">
+          <i class="fa-solid fa-drafting-compass icon-left"></i>
+          <div>
             <h3>Land Survey</h3>
             <p>A land base survey maps and measures land features, boundaries, and properties for planning, development, and legal purposes.</p>
-          </li>
-          <li class="Main1">
-            
+          </div>
+        </li>
+        <li class="Main1 scroll-animate" data-aos="flip-down" data-aos-once="true">
+          <i class="fa-solid fa-map-location-dot icon-left"></i>
+          <div>
             <h3>Parcel Mapping</h3>
             <p>Parcel mapping is the process of creating and maintaining maps that define property boundaries, ownership, and land divisions for tax and planning purposes.</p>
-          </li>
-          <li class="Main1">
-            
+          </div>
+        </li>
+        <li class="Main1 scroll-animate" data-aos="flip-down" data-aos-once="true">
+          <i class="fa-solid fa-laptop-code icon-left"></i>
+          <div>
             <h3>Software Solutions</h3>
-            <p>Software solutions for improve accuracy by automating data collection and visualization. They integrate GIS and AI to streamline tax calculations, ensuring fair assessments and efficient land management.</p>
-          </li>
-          <li class="Main1">
-          
+            <p>Software solutions improve accuracy by automating data collection and visualization. They integrate GIS and AI to streamline tax calculations, ensuring fair assessments and efficient land management.</p>
+          </div>
+        </li>
+        <li class="Main1 scroll-animate" data-aos="flip-down" data-aos-once="true">
+          <i class="fa-solid fa-users icon-left"></i>
+          <div>
             <h3>House Hold Survey</h3>
             <p>A household survey collects data on demographics, income, living conditions, and social aspects to support policy and planning.</p>
-          </li>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+     
 
-          </ul>
-
-      </div>
-
-
-    </section>
-
-    <section>
-
-      <div class="sec1">
-        <h5>Our Clients</h5>
-        <h2>Our Valuable clients</h2>
-      </div>
-
-      <div class="sec">
-
-        <img src="Clients/LAKHANI .jpg" alt="">
-        <img src="Clients/DIGRAS.jpg" alt="">
-        <img src="Clients/MAHADULA.jpg" alt="">
-        <img src="Clients/BUTIBORI.jpg" alt="">
-        <img src="Clients/WANI.jpg" alt="">
-        <img src="Clients/JATH.jpg" alt="">
-        <img src="Clients/DEVRI.jpg" alt="">
-        <img src="Clients/SADAK-ARJUNI.jpg" alt="">
-        <img src="Clients/KHAPA.jpg" alt="">
-        <img src="Clients/MAHUR.jpg" alt="">
-        <img src="Clients/MURTIJAPUR.jpg" alt="">
-        <img src="Clients/AHERI.jpg" alt="">
-        <img src="Clients/MOHADI.jpg" alt="">
-        <img src="Clients/GADCHANDUR.jpg" alt="">
-        <img src="Clients/GHATANJI.jpg" alt="">
-        <img src="Clients/BESA-PIPALA.jpg" alt="">
-        <img src="Clients/MAREGAO.jpg" alt="">
-        <img src="Clients/PHAIPUR.jpg" alt="">
-        <img src="Clients/MANGARULPER.jpg" alt="">
-        <img src="Clients/MALEGAO.jpg" alt="">
-        <img src="Clients/CHANDURBAZAR.jpg" alt="">
-        <img src="Clients/PASUR.jpg" alt="">
+  <section class="client-slider scroll-animate">
+    <div class="sec1 scroll-animate">
+      <h5>Our Clients</h5>
+      <h2>Our Valuable clients</h2>
+    </div>
+  
+    <div class="slider-container">
+      <div class="slider-track">
+        <!-- Original Images -->
+        <img src="Clients/LAKHANI.jpg" alt="Lakhani">
+        <img src="Clients/DIGRAS.jpg" alt="Digras">
+        <img src="Clients/MAHADULA.jpg" alt="Mahadula">
+        <img src="Clients/BUTIBORI.jpg" alt="Butibori">
+        <img src="Clients/WANI.jpg" alt="Wani">
+        <img src="Clients/JATH.jpg" alt="Jath">
+        <img src="Clients/DEVRI.jpg" alt="Devri">
+        <img src="Clients/SADAK-ARJUNI.jpg" alt="Sadak Arjuni">
+        <img src="Clients/KHAPA.jpg" alt="Khapa">
+        <img src="Clients/MAHUR.jpg" alt="Mahur">
+        <img src="Clients/MURTIJAPUR.jpg" alt="Murtijapur">
+        <img src="Clients/AHERI.jpg" alt="Aheri">
         
-
-      </div>
-
-
-    </section>
-
-    <section>
-
-       <div class="sec1">
-
-        <h5>About Us</h5>
-       <h2>3G Associeates:-</h2>
-
-       </div class="sec3">
-
-
-       <ul>
-        <li>
-          <p>3G Associates uses geospatial technologies to create a better world</p>
-        </li>
-        <li>
-           <p>The company specializes in Mapping & GIS, Property Tax Assessment & Revaluation, Consumer Surveys, Land Base Survey and Integration, Tree Census, and Software Development.</p>
-  
-        </li>
-        <li>
-          <p>It provides GIS contracting services for municipalities to create, update, and maintain GIS data</p>
-        </li>
-        <li>
-          <p>Services include land cover mapping, utility mapping, and tax parcel mapping.</p>
-        </li>
-        <li>
-          <p>Supports property tax assessment and revaluation for fair tax evaluations.</p>
-        </li>
-        <li>
-          <p>Conducts GIS-based Tree Census for urban planning and environmental conservation.</p>
-        </li>
-        <li>
-          <p>Works on land, geographical, and geological system-related projects.</p>
-        </li>
-        <li>
-          <p>Develops software for geospatial data management and analysis.</p>
-        </li>
-        <li>
-          <p>Focuses on innovation, accuracy, and efficiency in all services.</p>
-        </li>
-        <li>
-          <p>Provides high-quality geospatial solutions to help organizations make better decisions</p>
-        </li>
-       </ul>
-    </section>
-
-   
-  
-
-    
-  <footer id="footer">
-    
-
-      <div class="container-1">
-        <div class="footer-top">
-          
-              <div class="row">
-                  <div class="contact-section">
-                      <h4>Contact</h4>
-                      <p><strong>Phone:</strong> <a href="tel:07122984809">+91 07122984809</a></p>
-                      <p><strong>Email:</strong> <a href="mailto:3gasso@gmail.com">3gasso@gmail.com</a></p>
-                      
-                  </div>
-                  <div class="address-section">
-                      <h4>Address</h4>
-                      <p><strong>Nagpur Office</strong></p>
-                      <p>3G Associates<br>First Floor, Kuraskar Bhavan,<br>Near Vishal Mega Mart,<br>Bhande Plot Square,<br>Nagpur-440024, Maharashtra</p>
-                  </div>
-              </div>
-          
-      </div>
-          <div class="copyright">
-              &copy; Copyright <strong><span>3GAssociates 2025</span></strong>. All Rights Reserved 
-          </div>
-          <div class="credits">
-              Designed and Developed by<a href="http://www.3GAssociates.org"><b>3GAssociates 2025</b></a> 
-          </div>
-      </div>
-  </footer>
       
+    </div>
+  </section>
+
+  <section class="about-3g-section scroll-animate">
+    <div class="sec1 scroll-animate">
+      <h5>About Us</h5>
+      <h2>3G Associates:-</h2>
+    </div>
+
+    <ul>
+      <li class="scroll-animate">
+        <p>3G Associates uses geospatial technologies to create a better world</p>
+      </li>
+      <li class="scroll-animate">
+        <p>The company specializes in Mapping & GIS, Property Tax Assessment & Revaluation, Consumer Surveys, Land Base Survey and Integration, Tree Census, and Software Development.</p>
+      </li>
+      <li class="scroll-animate">
+        <p>It provides GIS contracting services for municipalities to create, update, and maintain GIS data</p>
+      </li>
+      <li class="scroll-animate">
+        <p>Services include land cover mapping, utility mapping, and tax parcel mapping.</p>
+      </li>
+      <li class="scroll-animate">
+        <p>Supports property tax assessment and revaluation for fair tax evaluations.</p>
+      </li>
+      <li class="scroll-animate">
+        <p>Conducts GIS-based Tree Census for urban planning and environmental conservation.</p>
+      </li>
+      <li class="scroll-animate">
+        <p>Works on land, geographical, and geological system-related projects.</p>
+      </li>
+      <li class="scroll-animate">
+        <p>Develops software for geospatial data management and analysis.</p>
+      </li>
+      <li class="scroll-animate">
+        <p>Focuses on innovation, accuracy, and efficiency in all services.</p>
+      </li>
+      <li class="scroll-animate">
+        <p>Provides high-quality geospatial solutions to help organizations make better decisions</p>
+      </li>
+    </ul>
+  </section>
+
+
+  <section>
+    <div class="manage-owen">
+      <h2>Management & Ownership</h2>
+    </div>
   
+    <!-- Tab Buttons -->
+    <div class="tab-buttons">
+      <h4 data-tab="directors">Directors</h4>
+      <h4 data-tab="management">Management</h4>
+      <h4 data-tab="professionals">Professionals</h4>
+    </div>
+  
+    <!-- Tab Content -->
+    <div id="directors" class="tab-content">
+      <ul>
+        <li>Mr. Anil S. Gonnade - B.E. Civil Engineering</li>
+        <li>Mr. Pramod M. Gawande - B. Com. (ITI D/Civil)</li>
+        <li>Mrs. Archana A. Gadekar - M.A. Marathi</li>
+      </ul>
+    </div>
+  
+    <div id="management" class="tab-content">
+      <ul>
+        <li>Mr. P. D. Suradkar - Ex. Tax Superintendent, N.M.C.</li>
+        <li>Mr. Anup A. Gadekar - B.E. (Chem) MBA</li>
+        <li>Mr. Swaroop A. Gadekar - B.Tech. (Civil) MBA</li>
+        <li>Mr. Swapnil A. Gadekar - B.Tech. (Chemical) MBA</li>
+        <li>Mr. Anil K. Gadekar - Ex. Tax Inspector, NMC</li>
+      </ul>
+    </div>
+  
+    <div id="professionals" class="tab-content">
+      <ul>
+        <li>Mr. S.N.Divecha, Mr. Shrey Agrawal - Chartered Accountant</li>
+        <li>Mr. Ravi Giripunje - Advocate</li>
+        <li>Mr. Vilas Bhajani - (R.T.D Nagpur Division)</li>
+        <li>Mr. Anantvijay Patrikar</li>
+      </ul>
+    </div>
+  </section>
   
 
-  </body>
+  <footer id="footer" class="scroll-animate">
+    <div class="container-1">
+      <div class="footer-top">
+        <div class="row">
+          <div class="contact-section scroll-animate">
+            <h4>Contact</h4>
+            <p><strong>Phone:</strong> <a href="tel:07122984809">+91 07122984809</a></p>
+            <p><strong>Email:</strong> <a href="mailto:3gasso@gmail.com">3gasso@gmail.com</a></p>
+          </div>
+          <div class="address-section scroll-animate">
+            <h4>Address</h4>
+            <p><strong>Nagpur Office</strong></p>
+            <p>3G Associates<br>First Floor, Kuraskar Bhavan,<br>Near Vishal Mega Mart,<br>Bhande Plot Square, <br>Umred Road,<br>Nagpur-440024, Maharashtra</p>
+          </div>
+        </div>
+      </div>
+      <div class="copyright scroll-animate">
+        &copy; Copyright <strong><span>3GAssociates 2025</span></strong>. All Rights Reserved 
+      </div>
+      <div class="credits scroll-animate">
+        Designed and Developed by<a href="http://www.3GAssociates.org"><b>3GAssociates 2025</b></a> 
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple JavaScript to detect when elements are in view
+    document.addEventListener('DOMContentLoaded', function() {
+      const animateElements = document.querySelectorAll('.scroll-animate');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+      });
+
+      animateElements.forEach(element => {
+        observer.observe(element);
+      });
+    });
+
+    const tabButtons = document.querySelectorAll('.tab-buttons h4');
+    const tabContents = document.querySelectorAll('.tab-content');
+  
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons and contents
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+  
+        // Add active class to current button and related content
+        button.classList.add('active');
+        const tabId = button.getAttribute('data-tab');
+        document.getElementById(tabId).classList.add('active');
+      });
+    });
+  
+    // Optional: set the first tab as active on load
+    tabButtons[0].click();
+  </script>
+
+<!-- script for animation of scroll -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset:450,
+      duration:1000,
+    });
+  </script>
+
+ <script>
+  
+  let slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+  }
+
+// Font Awesome i tag sliding
+
+var swiper = new Swiper('.swiper-container', {
+  slidesPerView: 3,
+  spaceBetween: 20,
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
+
+  
+  
+ </script>
+
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    slidesPerView: 1,
+    spaceBetween: 20,
+    breakpoints: {
+      768: {
+        slidesPerView: 1,
+      },
+      1024: {
+        slidesPerView: 1,
+      }
+    }
+  });
+</script>
+
+
+
+
+
+</body>
 </html>

@@ -1,0 +1,943 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  
+}
+
+html {
+  scroll-behavior: smooth;
+  
+}
+
+body {
+  font-family: Arial, 'Times New Roman', Times, serif;
+  line-height: 2.6;
+   background: rgb(248, 245, 245);
+  padding-top: 70px;
+}
+
+
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  background: white;
+}
+
+/*Navigation CSS part*/
+.navbar {
+  display: flex;
+  padding: 0 50px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar input#menu-toggler {
+  display: none;
+}
+
+.navbar #hamburger-btn {
+  cursor: pointer;
+  display: none;
+  background-color: #000;
+}
+
+/* Responsive menu - for mobile */
+@media (max-width: 768px) {
+  #hamburger-btn {
+    display: none;
+  }
+
+  #menu-toggler:not(:checked)~.all-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    align-items: stretch;
+    flex: 1 1 100%; /* One item per row */
+    top: 10px;
+    left: 0;
+    width: 100px;
+    background-color: #444;
+    padding: 100px ;
+  }
+
+  /* Show menu when toggled */
+  #menu-toggler:checked ~ .all-links {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    flex-wrap: wrap;
+    gap: 2px;
+    top: 10px;
+    left: 10px;
+    width: 100%;
+    background-color: #444;
+    padding: 20px;
+    z-index: 10;
+    font-size: 20px;
+    font-family: arial,'Times New Roman', Times, serif;
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(0);
+    opacity: 1;
+
+  }
+
+  .all-links li {
+    text-align: left;
+    margin: 10px 0;
+  }
+}
+
+.navbar .all-links {
+  padding: 2% 6% ;
+  display: flex;
+  align-items: right;
+  text-align: right;
+  font-size: 25px;
+  gap: 20px;
+  font-family: arial,'Times New Roman', Times, serif;
+  position: relative;
+  bottom: 10px;
+  right: -350px;
+  
+  
+}
+
+.navbar .all-links:hover{
+  
+    color: #03a534;
+    
+}
+
+.navbar .all-links li {
+  padding: auto;
+  position: relative;
+  list-style: none;
+  gap: 10px;
+  
+}
+
+
+
+.navbar .logo a {
+  padding: 15px;
+  display: flex;
+  align-items: left;
+  margin-left: 0;
+  text-align: left;
+  left: 100px;
+  padding-left: 0;
+}
+
+
+.navbar .logo img{
+  
+  position: absolute;
+  height: 60px;
+  width: auto;
+  left: 100px;
+  bottom: 38px;
+  justify-content: center;
+  
+
+  
+}
+
+header a, footer a {
+  margin-left: 40px;
+  text-decoration: none;
+  color: #140202;
+  height: 100%;
+  padding: 20px 0;
+  display: inline-block;
+}
+
+header a:hover, footer a:hover {
+  color: #08f328;
+}
+
+.manage-owen h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  /* Tab-style buttons */
+  .tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .tab-buttons h4 {
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+
+  .tab-buttons h4:hover,
+  .tab-buttons h4.active {
+    background-color: #0056b3;
+  }
+
+  /* Hide all content by default */
+  .tab-content {
+    display: none;
+    text-align: center;
+  }
+
+  .tab-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: left;
+  }
+
+  .tab-content ul li {
+    padding: 8px;
+    border-bottom: 1px solid white;
+    background-color: #F8F5F5;
+  }
+
+  /* Show active tab */
+  .tab-content.active {
+    display: block;
+  }
+
+  
+.homepage {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background: url("images/web Site/bgmi.jpg");
+    background-position: center;
+    background-size: 1920px;
+  
+    
+  }
+  
+  .homepage .text p{
+    
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  
+  .homepage::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  
+  .homepage .content {
+    display: flex;
+   
+    height: 35%;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .homepage .content h1 {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #aae6b9;
+  }
+  
+  .homepage .content .text {
+    margin-bottom: 550px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Services in the top main page */
+
+  .services-box {
+    background: rgba(255, 255, 255, 0.004); /* more transparent */
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 160px;
+ 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.004); /* softer shadow */
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .service-card a{
+    background-color: rgba(0, 0, 0, 0.004); /* lighter background for more transparency */
+    border-radius: 10px;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+  }
+  
+  .service-card i {
+    font-size: 50px;
+    color: #b5e0c0;
+    margin-bottom: 10px;
+  }
+  
+  .service-card h3 {
+    margin-bottom: 20px;
+    font-size: 35px;
+    
+  }
+  
+  
+  
+  section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0; /* Uniform padding for all sections */
+    min-height: 10vh; /* Each section takes at least full viewport height */
+    width: 100%;
+  }
+  
+ 
+  
+  
+  
+  .navbar #menu-toggler:checked~.all-links {
+    left: 0;
+  }
+  
+  
+  
+  
+  section .cards .card {
+    width: calc(100% / 2 - 15px);
+    margin-bottom: 30px;
+  }
+  
+  .homepage .content h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .homepage .content .text {
+    font-size: 17px;
+  }
+  
+  
+  /*Homa-section-Services-part*/
+  
+  /* General styling */
+  
+  
+  .sec1 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .sec1 h5 {
+    color: #3498db;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .sec1 h2 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  /* Services grid layout */
+  .sec2 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .main1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    max-width: 1600px;
+    
+  }
+  
+  .Main1 {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .icon-left {
+    font-size: 24px;
+    color: #0d2b4d; /* Customize color */
+    margin-top: 20px;
+  }
+  
+  .Main1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .Main1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .Main1:hover::before {
+    opacity: 1;
+  }
+  
+  .Main1 h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+  }
+  
+  .Main1 p {
+    color: #7f8c8d;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+  }
+  
+  .Main1:hover h3,
+  .Main1:hover p {
+    color: #ffffff;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 992px) {
+    .main1 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .main1 {
+      grid-template-columns: 1fr;
+    }
+    
+    .sec1 h2 {
+      font-size: 2rem;
+    }
+  }
+  
+  /*Home-section-Client-part*/
+  
+   /* Client Logo Slider */
+   .client-slider {
+    padding: 40px 0;
+  }
+  
+  .client-slider .sec1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .client-slider .slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background: #f5f5f5;
+    padding: 20px 0;
+  }
+  
+  .client-slider .slider-track {
+    display: flex;
+    align-items: center;
+    animation: slide 40s linear infinite;
+    will-change: transform;
+  }
+  
+  .client-slider .slider-track:hover {
+    animation-play-state: paused;
+  }
+  
+  .client-slider .slider-container::before,
+  .client-slider .slider-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 2;
+    pointer-events: none;
+  }
+  
+  .client-slider .slider-container::before {
+    left: 0;
+    background: linear-gradient(to right, #f5f5f5, rgba(245, 245, 245, 0));
+  }
+  
+  .client-slider .slider-container::after {
+    right: 0;
+    background: linear-gradient(to left, #f5f5f5, rgba(245, 245, 245, 0));
+  }
+  
+  .client-slider .slider-track img {
+    height: auto;
+    max-height: 1000px;
+    width: auto;
+    max-width: 1000px;
+    margin: 0 40px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+  
+  .slider-track img:hover {
+    background: linear-gradient(45deg, #a8e063, #56ab2f); /* Green gradient */
+    box-shadow: 0 0 15px rgba(60, 160, 101, 0.8); /* Light green glow */
+    transform: scale(1.02); /* Slight scaling for a smooth effect */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+    border-radius: 20px; /* Rounded corners */
+  }
+  
+  /* Navigation buttons for sliding */
+.slide-left, .slide-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 16px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .slide-left {
+    left: 10px;
+  }
+  
+  .slide-right {
+    right: 10px;
+  }
+  
+  /* Button hover effect */
+  .slide-left:hover, .slide-right:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  
+  /*Home-section - aboutUs Part*/
+  
+  /* About 3G Associates Section - Scoped Styles */
+  .about-3g-section {
+    padding: 60px 20px;
+   
+    margin: 40px 0;
+  }
+  
+  .about-3g-section .sec1 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .about-3g-section .sec1 h5 {
+    color: #3a7bd5;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .about-3g-section .sec1 h2 {
+    color: #333;
+    font-size: 2.5rem;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .about-3g-section .sec1 h2::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(to right, #3a7bd5, #00d2ff);
+    bottom: -10px;
+    left: 20%;
+    border-radius: 3px;
+  }
+  
+  .about-3g-section ul {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .about-3g-section li {
+    background: white;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .about-3g-section li:hover {
+    transform: translateY(-3px);
+  }
+  
+  .about-3g-section li p {
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
+    padding-left: 30px;
+    position: relative;
+  }
+  
+  .about-3g-section li p::before {
+    content: '•';
+    color: #3a7bd5;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .about-3g-section {
+      padding: 40px 15px;
+    }
+    
+    .about-3g-section .sec1 h2 {
+      font-size: 2rem;
+    }
+    
+    .about-3g-section li {
+      padding: 15px;
+    }
+  }
+  /*Management and owenership css part*/
+  
+  .manage-owen{
+    align-items: center;
+  }
+  
+  
+
+/*Footer CSS part*/
+footer {
+    background: #000; /* Black Background */
+    color: white; /* White Text */
+    padding: -10px 50px;
+    font-size: 14px;
+  }
+  
+  .footer-top {
+    padding-bottom: 30px; /* Fixed padding issue */
+    background-color: #000; /* Black */
+  }
+  
+  .footer-top .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .address-section, .contact-section {
+    width: 48%;
+    padding: 20px;
+  }
+  
+  .address-section {
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+  
+  }
+  
+  .contact-section {
+    text-align: right;
+    gap: 5px;
+  }
+  
+  .contact-section h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color:white; /* White Text */
+    
+  }
+  
+  .address-section h4{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color:white; /* White Text */
+    
+  }
+  
+  
+  
+  .contact-section a {
+    color: #0bec1e; /* Yellow for visibility */
+    text-decoration: none;
+  }
+  
+  .contact-section a:hover, .address-section a:hover {
+    text-decoration: underline;
+  }
+  
+  .container-1 {
+    background-color: #000; /* Black */
+  }
+  
+  .copyright {
+    background: #000; /* Black */
+    text-align: center;
+    color: white;
+    padding: 10px;
+    border-top: 1px solid #444;
+  }
+  
+  .credits {
+    background: #000; /* Black */
+    text-align: center;
+    color: white;
+    font-size: 13px;
+  }
+  
+  .credits a {
+    color: #0bec1e; /* Yellow */
+    text-decoration: none;
+  }
+  
+  .credits a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer section ends */
+   /* Scroll Animation Styles */
+   @media (prefers-reduced-motion: no-preference) {
+    /* Fade-in Up Animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Initially hide all animatable elements */
+    .scroll-animate {
+      opacity: 0;
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    /* Class that gets added when element is in view */
+    .animate-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Client Slider Animation (continuous horizontal scroll) */
+    .client-slider .slider-track {
+      display: flex;
+      align-items: center;
+      animation: slide 40s linear infinite;
+      will-change: transform;
+    }
+    
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  /* Fallback for reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-animate {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+    .client-slider .slider-track {
+      animation: none !important;
+    }
+  }
+
+  /* Slinding image CSS */
+
+  * {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Font - awesome style */
+
+.service-card a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #000;
+  padding: 20px;
+}
+
+.service-card i {
+  font-size: 2rem;
+  margin-top: 10px;
+  color: #2575fc; /* Optional: Change icon color */
+}
+
+.service-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}

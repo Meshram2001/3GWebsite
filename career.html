@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3G Associates</title>
-    <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="career.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
 </head>
 <body>
 
@@ -15,6 +18,7 @@
         <nav class="navbar">
           <h2 class="logo"><a href="#"></a><img src="images/Logo.jpg" alt=""></h2>
           
+          <input type="checkbox" id="menu-toggler" />
           <label for="menu-toggler" id="hamburger-btn">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
               <path d="M0 0h24v24H0z" fill="none"/>
@@ -24,7 +28,7 @@
           <ul class="all-links">
             <li><a href="3g.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="portfolio.html">Project</a></li>
+            <li><a href="portfolio.html">Projects</a></li>
             <li><a href="service.html">About Us</a></li>
             <li><a href="career.html">Career</a></li>
             <li><a href="contact.html">Contact Us</a></li>
@@ -39,62 +43,103 @@
 
      </section>
 
-   
-
-   <section class="career-section">
-
+     <section>
+        <div class="career-intro">
+            <h2>Join Our Team</h2>
+            <p>At 3G Associates, we believe in nurturing talent and fostering a culture of innovation. We are always on the lookout for passionate individuals who are eager to make a difference.</p>
+        </div>
         <div class="career-text">
            
        
-            <div class="slowgen">
-                 <h3>"Unlock Your Potential with Us."</h3><br><br>
-                 <p >"Success isn’t just about climbing the ladder—it’s about building it for others too. Grow, inspire, and lead the way!"</p>
-            </div>
+          <div class="slowgen">
+               <h3>"Unlock Your Potential with Us."</h3>
+               <p >"Success isn’t just about climbing the ladder—it’s about building it for others too. Grow, inspire, and lead the way!"</p>
+          </div>
+      </div>
+        <div class="career-image">
+            <img src="images/careerPage.png" alt="Career Opportunities">
         </div>
+     </section>
 
-
-    <div class="container">
-        <h2>Join Our Team</h2>
-        <p>Fill out the form below to apply for a position at our company.</p>
-
-        <form action="submit_form.php" method="POST" enctype="multipart/form-data">
-            
-            <div class="form-group">
+     <section class="career-section">
+        <div class="career-container">
+      
+          <!-- LEFT SIDE: Form -->
+          <div class="form-container">
+            <h2>Join Our Team</h2>
+            <p>Fill out the form below to apply for a position at our company.</p>
+      
+            <form action="submit_form.php" method="POST" enctype="multipart/form-data">
+              <div class="form-group">
                 <label for="name">Full Name</label>
                 <input type="text" id="name" name="name" required placeholder="Enter your full name">
-            </div>
-
-            <div class="form-group">
+              </div>
+      
+              <div class="form-group">
                 <label for="gender">Gender</label>
                 <select id="gender" name="gender" required>
-                    <option value="" disabled selected>Select Gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
+                  <option value="" disabled selected>Select Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
                 </select>
-            </div>
-
-            <div class="form-group">
+              </div>
+      
+              <div class="form-group">
                 <label for="age">Age</label>
                 <input type="number" id="age" name="age" required min="18" max="65" placeholder="Enter your age">
-            </div>
-
-            <div class="form-group">
+              </div>
+      
+              <div class="form-group">
                 <label for="qualification">Qualification</label>
                 <input type="text" id="qualification" name="qualification" required placeholder="Enter your qualification">
-            </div>
-
-            <div class="form-group">
+              </div>
+      
+              <div class="form-group">
                 <label for="resume">Upload Resume</label>
                 <input type="file" id="resume" name="resume" required accept=".pdf,.doc,.docx">
+              </div>
+      
+              <button type="submit" class="submit-btn">Submit Application</button>
+            </form>
+          </div>
+      
+          <!-- RIGHT SIDE: Departments -->
+          <div class="departments-container">
+            <h2>Open Positions</h2>
+            <div class="department-card">
+              <h3>IT Department</h3>
+              <ul>
+                <li>Java Spring Boot Developer</li>
+              </ul>
             </div>
-
-            <button type="submit" class="submit-btn">Submit Application</button>
-
-        </form>
-    </div>
-</section>
-
+      
+            <div class="department-card">
+              <h3>Business Development</h3>
+              <ul>
+                <li>BDM</li>
+              </ul>
+            </div>
+      
+            <div class="department-card">
+              <h3>GIS Department</h3>
+              <ul>
+                <li>GIS Specialist</li>
+                <li>AutoCAD Engineer</li>
+              </ul>
+            </div>
+      
+            <div class="department-card">
+              <h3>Data Entry</h3>
+              <ul>
+                <li>Data Entry Operator</li>
+              </ul>
+            </div>
+          </div>
+      
+        </div>
+      </section>
+      
 <footer id="footer">
     
 
@@ -123,7 +168,11 @@
             Designed and Developed by<a href="http://www.3GAssociates.org"><b>3GAssociates 2025</b></a> 
         </div>
     </div>
+
+
 </footer>
+
+
 
     
 </body>

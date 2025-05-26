@@ -14,28 +14,25 @@
 
    </div>
    
-    <header>
-        <nav class="navbar">
-          <h2 class="logo"><a href="#"></a><img src="images/Logo.jpg" alt=""></h2>
-          
-          <input type="checkbox" id="menu-toggler" />
-          <label for="menu-toggler" id="hamburger-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
-              <path d="M0 0h24v24H0z" fill="none"/>
-              <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/>
-            </svg>
-          </label>
-          <ul class="all-links">
-            <li><a href="3g.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="portfolio.html">Projects</a></li>
-            <li><a href="service.html">About Us</a></li>
-            <li><a href="career.html">Career</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </nav>
+ <header>
+  <nav class="navbar">
+    <h2 class="logo"><img src="images/Logo.jpg" alt="3G Associates Logo"></h2>
+    <div class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="all-links">
+      <li><a href="3g.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Projects</a></li>
+      <li><a href="service.html">About Us</a></li>
+      <li><a href="career.html">Career</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
 
-     </header> 
 
      <section class="A1">
 
@@ -171,6 +168,17 @@
 
 
 </footer>
+
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.all-links');
+
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+</script>
+
 
 
 

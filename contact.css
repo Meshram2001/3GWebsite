@@ -9,10 +9,10 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(-45deg, #1e3c72, #2a5298, #1e3c72, #2a5298);
+  background: #F8F5F5;
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
-  color: #fff;
+  color:black;
   min-height: 100vh;
 }
 
@@ -35,7 +35,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color:white;
   position: fixed;
   width: 100%;
   top: 0;
@@ -70,7 +70,7 @@ body {
 
 .all-links li a {
   text-decoration: none;
-  color: #fff;
+  color:black;
   font-weight: bold;
   transition: color 0.3s;
 }
@@ -152,7 +152,7 @@ header a:hover, footer a:hover {
     letter-spacing: 5px;
     color: black;
     position: relative; /* Required for ::after underline */
-    margin: 5px;
+    margin: 30px;
     padding: -5px;
     text-align: left;
     display: inline-block; /* Important to fit underline exactly */
@@ -349,6 +349,23 @@ header a:hover, footer a:hover {
   .credits a:hover {
     text-decoration: underline;
   }
+
+  .social-icons {
+  text-align: right;
+  
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #08f328;
+}
   
   /* Footer section */
   

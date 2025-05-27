@@ -9,10 +9,10 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(-45deg, #1e3c72, #2a5298, #1e3c72, #2a5298);
+  background: #F8F5F5;
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
-  color: #fff;
+  color:black;
   min-height: 100vh;
 }
 
@@ -114,7 +114,22 @@ body {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
+.social-icons {
+  text-align: right;
+  
+}
 
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #08f328;
+}
 
 
 header a, footer a {

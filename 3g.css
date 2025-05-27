@@ -8,10 +8,10 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(-45deg, #1e3c72, #2a5298, #1e3c72, #2a5298);
+  background: #F8F5F5;
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
-  color: #fff;
+  color:black;
   min-height: 100vh;
 }
 
@@ -34,9 +34,10 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: white;
   position: fixed;
   width: 100%;
+ 
   top: 0;
   z-index: 1000;
 }
@@ -69,7 +70,7 @@ body {
 
 .all-links li a {
   text-decoration: none;
-  color: #fff;
+  color: black;
   font-weight: bold;
   transition: color 0.3s;
 }
@@ -126,9 +127,26 @@ header a:hover, footer a:hover {
   color: #08f328;
 }
 
+.social-icons {
+  text-align: right;
+  
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #08f328;
+}
+
 .manage-owen h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   /* Tab-style buttons */
@@ -180,7 +198,7 @@ header a:hover, footer a:hover {
 
   
 .homepage {
-       height: 100vh;
+    height: 100vh;
     width: 100%;
     position: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -189,23 +207,15 @@ header a:hover, footer a:hover {
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 8px;
-
-    
   }
   
   .homepage .text p{
-    
     font-size: 30px;
     font-weight: bold;
-    
-  margin: 0 auto;
-  
-  font-family: 'Segoe UI', sans-serif;
-  
-  
-  color: #333;
-  text-align: center;
-
+    margin: 0 auto;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    text-align: center;
   }
   
   
@@ -222,7 +232,6 @@ header a:hover, footer a:hover {
   
   .homepage .content {
     display: flex;
-   
     height: 35%;
     z-index: 1;
     align-items: center;
@@ -252,7 +261,6 @@ header a:hover, footer a:hover {
     padding: 20px;
     border-radius: 15px;
     margin-top: 160px;
- 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.004); /* softer shadow */
     max-width: 750px;
     margin-left: auto;
@@ -285,7 +293,6 @@ header a:hover, footer a:hover {
   }
   
   
-  
   section {
     display: flex;
     align-items: center;
@@ -294,18 +301,11 @@ header a:hover, footer a:hover {
     min-height: 10vh; /* Each section takes at least full viewport height */
     width: 100%;
   }
-  
- 
-  
-  
-  
+
   .navbar #menu-toggler:checked~.all-links {
     left: 0;
   }
-  
-  
-  
-  
+
   section .cards .card {
     width: calc(100% / 2 - 15px);
     margin-bottom: 30px;
@@ -360,7 +360,7 @@ header a:hover, footer a:hover {
     max-width: 1600px;
     
   }
-  
+
   .Main1 {
     background: #ffffff;
     border-radius: 10px;

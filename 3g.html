@@ -35,19 +35,16 @@
   </nav>
 </header>
 
-
-  <section class="homepage scroll-animate" id="home">
-    <div class="content">
-      <div class="text">
-        <h1 class="text-3xl font-bold animate-bounce">3G Associates</h1>
-        <p>
-    Welcome to 3G Associates, a leading Property tax assessment and Services firm dedicated to helping ULB - Municipal Councils thrive in today’s competitive landscape. With a team of creative professionals and strategic thinkers, we specialize in assessment through modernization, transparency and that enhance the accuracy of assessments, increase fairness and equity, and boost revenue.
-  </p>
-      
-      </div>
+<section class="homepage scroll-animate" id="home">
+  <div class="content">
+    <div class="text">
+      <h1 class="text-3xl font-bold animate-bounce">3G Associates</h1>
+      <p><span id="typed-text"></span></p>
     </div>
+  </div>
+</section>
 
-  </section>
+
 
   <section class="scroll-animate">
     <div class="sec1 scroll-animate">
@@ -361,6 +358,20 @@ var swiper = new Swiper('.swiper-container', {
     navLinks.classList.toggle('active');
   });
 </script>
+
+<script>
+  var typed = new Typed("#typed-text", {
+    strings: [
+      "Welcome to 3G Associates, a leading Property tax assessment and Services firm dedicated to helping ULB - Municipal Councils thrive in today’s competitive landscape.",
+      "With a team of creative professionals and strategic thinkers, we specialize in assessment through modernization, transparency, and accuracy that enhance fairness and boost revenue."
+    ],
+    typeSpeed: 40,
+    backSpeed: 0,
+    fadeOut: false,
+    loop: false
+  });
+</script>
+
 
 
 

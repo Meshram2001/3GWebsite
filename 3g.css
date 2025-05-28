@@ -720,18 +720,22 @@ footer {
     color: white;
     padding: 10px;
     border-top: 1px solid #444;
+    min-height: 50px;
   }
   
   .credits {
-    background: #000; /* Black */
+  
     text-align: center;
     color: white;
     font-size: 13px;
+    min-height: 50px;
   }
   
   .credits a {
     color: #0bec1e; /* Yellow */
     text-decoration: none;
+     min-height: 50px;
+    
   }
   
   .credits a:hover {

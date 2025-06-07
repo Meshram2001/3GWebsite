@@ -10,7 +10,7 @@
   
   <link rel="script" href="script.js">
   <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
 </head>
@@ -24,6 +24,7 @@
       <span></span>
       <span></span>
     </div>
+
     <ul class="all-links">
       <li><a href="3g.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
@@ -39,7 +40,8 @@
   <div class="content">
     <div class="text">
       <h1 class="text-3xl font-bold animate-bounce">3G Associates</h1>
-      <p><span id="typed-text"></span></p>
+      <p><span id="typed-text">Welcome to 3G Associates, a leading Property tax assessment and Services firm dedicated to helping ULB - Municipal Councils thrive in today’s competitive landscape. With a team of creative professionals and strategic thinkers, we specialize in assessment through modernization, transparency and that enhance the accuracy of assessments, increase fairness and equity, and boost revenue.
+</span></p>
     </div>
   </div>
 </section>
@@ -107,24 +109,26 @@
       <h2>Our Valuable clients</h2>
     </div>
   
-    <div class="slider-container">
-      <div class="slider-track">
-        <!-- Original Images -->
-        <img src="Clients/LAKHANI.jpg" alt="Lakhani">
-        <img src="Clients/DIGRAS.jpg" alt="Digras">
-        <img src="Clients/MAHADULA.jpg" alt="Mahadula">
-        <img src="Clients/BUTIBORI.jpg" alt="Butibori">
-        <img src="Clients/WANI.jpg" alt="Wani">
-        <img src="Clients/JATH.jpg" alt="Jath">
-        <img src="Clients/DEVRI.jpg" alt="Devri">
-        <img src="Clients/SADAK-ARJUNI.jpg" alt="Sadak Arjuni">
-        <img src="Clients/KHAPA.jpg" alt="Khapa">
-        <img src="Clients/MAHUR.jpg" alt="Mahur">
-        <img src="Clients/MURTIJAPUR.jpg" alt="Murtijapur">
-        <img src="Clients/AHERI.jpg" alt="Aheri">
-        
-      
+    <div class="slider-container" style="position: relative; overflow: hidden;">
+    <button class="slide-left">&#10094;</button>
+
+    <div class="slider-track" id="sliderTrack">
+      <img src="Clients/LAKHANI .jpg" alt="Lakhani">
+      <img src="Clients/DIGRAS.jpg" alt="Digras">
+      <img src="Clients/MAHADULA.jpg" alt="Mahadula">
+      <img src="Clients/BUTIBORI.jpg" alt="Butibori">
+      <img src="Clients/WANI.jpg" alt="Wani">
+      <img src="Clients/JATH.jpg" alt="Jath">
+      <img src="Clients/DEVRI.jpg" alt="Devri">
+      <img src="Clients/SADAK-ARJUNI.jpg" alt="Sadak Arjuni">
+      <img src="Clients/KHAPA.jpg" alt="Khapa">
+      <img src="Clients/MAHUR.jpg" alt="Mahur">
+      <img src="Clients/MURTIJAPUR.jpg" alt="Murtijapur">
+      <img src="Clients/AHERI.jpg" alt="Aheri">
     </div>
+
+    <button class="slide-right">&#10095;</button>
+  </div>
   </section>
 
   <section class="about-3g-section scroll-animate">
@@ -292,42 +296,44 @@
     });
   </script>
 
- <script>
+ 
+
+ <!-- my changes -->
   
-  let slideIndex = 0;
-  showSlides();
-  
-  function showSlides() {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
+<script>
+  let autoScrollInterval;
+
+  function startAutoScroll() {
+    const track = document.getElementById('sliderTrack');
+    const container = document.querySelector('.slider-container');
+    let currentPosition = 0;
+    const slideStep = 320;
+
+    autoScrollInterval = setInterval(() => {
+      const maxScroll = -(track.scrollWidth - container.offsetWidth);
+      currentPosition -= slideStep;
+
+      if (currentPosition < maxScroll) {
+        currentPosition = 0;
+      }
+
+      track.style.transform = `translateX(${currentPosition}px)`;
+    }, 150);
   }
 
-// Font Awesome i tag sliding
+  function stopAutoScroll() {
+    clearInterval(autoScrollInterval);
+  }
 
-var swiper = new Swiper('.swiper-container', {
-  slidesPerView: 3,
-  spaceBetween: 20,
-  loop: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-});
+  // Start scrolling by default
+  startAutoScroll();
 
-  
-  
- </script>
+  // Detect when printing starts
+  window.addEventListener("beforeprint", stopAutoScroll);
+  window.addEventListener("afterprint", startAutoScroll);
+</script>
+
+
 
 <script>
   var swiper = new Swiper(".mySwiper", {

@@ -55,7 +55,7 @@ body {
 .menu-toggle span {
   height: 3px;
   width: 25px;
-  background: #fff;
+  background:black;
   margin: 4px 0;
   transition: 0.4s;
 }
@@ -89,7 +89,7 @@ body {
     top: 70px;
     left: -100%;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.9);
+   background-color: #717171;
     width: 100%;
     transition: left 0.3s ease-in-out;
     padding: 1rem 0;
@@ -256,6 +256,8 @@ header a:hover, footer a:hover {
 
   
 
+  
+
 
 /*Footer CSS part*/
 footer {
@@ -351,3 +353,27 @@ footer {
   /* Footer section */
   
   
+  @media (max-width: 768px) {
+  .services .cards .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .services .cards .card img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .services .cards .card .text-content {
+    width: 200%;
+    margin-top: 20px;
+  }
+
+  .services .cards .card h3,
+  .services .cards .card p {
+    
+    font-size: small;
+  }
+}
